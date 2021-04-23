@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import queryString from 'query-string'
 
 import axios from 'axios';
+import { isCompositeComponent } from 'react-dom/test-utils';
+
+const values = queryString.parse(window.location.search)
 
 class Access extends Component {
   constructor(props) {
-
+  
 	super(props);
-  const values = queryString.parse(window.location.search)
+  
   console.log(JSON.stringify(values))
     this.state = {
       success : false,
     };
-
   }
 
   parseJwt(token) {
@@ -22,8 +24,9 @@ class Access extends Component {
   }
 
     componentDidMount() {
-      const values = queryString.parse(window.location.search)
-      console.log(JSON.stringify(values))
+      //values = queryString.parse(window.location.search)
+      console.log(JSON.stringify(this.values))
+
     if (values.access_token)
     {
 
@@ -67,7 +70,7 @@ class Access extends Component {
     }); */
 
         // POST request using axios with set headers
-   /*     const article = { title: 'React POST Code to AWS Lambda' };
+      /*  const article = { title: 'React POST Code to AWS Lambda' };
         const headers = { 
           'Accept': 'application/json',
           'Content-Type': 'application/x-www-form-urlencoded', 
@@ -77,9 +80,44 @@ class Access extends Component {
         axios.post('https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid', article, { headers })
             .then(response => this.setState({ articleId: response.data.id }));
 
-      console.log("code=",values.code) */
-      window.location.href='https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=' + values.code
+      console.log("code=",values.code)  */
 
+      // send a POST request
+   //  this.setData();
+     axios({
+      method: 'post',
+      url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
+      data: {
+        code          :  values.code,
+        redirect_uri  : 'https://localhost:3000/access',
+      }
+    })
+    .then (res => console.log("result returned ",res))
+    //  window.location.href='https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=' + values.code
+
+ /*    const requestOptions = {
+      method: 'POST', 
+     // headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded', 
+        'Access-Control-Allow-Headers' : 'Content-Type',
+        'Access-Control-Allow-Origin'  : 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=',
+        // https://gentle-inlet-06589.herokuapp.com/https://sandbox.orcid.org/oauth/token
+        'Access-Control-Allow-Methods' : 'OPTIONS,POST,GET', 
+     },
+      data: JSON.stringify({
+         client_id: 'APP-RASOJQY62Z86Q8CU',
+         client_secret : 'df79d593-8392-46ca-9f4a-2fb4cb109655',
+         grant_type : 'authorization_code',
+         code: values.code, 
+         redirect_uri  : 'https://localhost:3000'}) 
+    };  
+    fetch('https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=', requestOptions)
+        .then(response => {
+          console.log('response= ',response)
+        }) */
+ // Local POST Request. Not the way we want this done in the future, but works to get the initial authorization code for testing.
   /*      const requestOptions = {
         method: 'POST', 
        // headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -87,7 +125,7 @@ class Access extends Component {
           'Accept': 'application/json',
           'Content-Type': 'application/x-www-form-urlencoded', 
           'Access-Control-Allow-Headers' : 'Content-Type',
-          'Access-Control-Allow-Origin'  : 'https://sandbox.orcid.org/oauth/token',
+          'Access-Control-Allow-Origin'  : ' https://pub.sandbox.orcid.org/oauth/token',
           // https://gentle-inlet-06589.herokuapp.com/https://sandbox.orcid.org/oauth/token
           'Access-Control-Allow-Methods' : 'OPTIONS,POST,GET', 
        },
@@ -97,18 +135,18 @@ class Access extends Component {
            grant_type : 'authorization_code',
            code: values.code, 
            redirect_uri  : 'https://localhost:3000'}) 
-      }; */
-     /* fetch('https://sandbox.orcid.org/oauth/token', requestOptions)
+      };  
+      fetch('https://pub.sandbox.orcid.org/oauth/token', requestOptions)
           .then(response => {
             console.log('response= ',response)
           }) */
- /*          const response = await fetch('https://sandbox.orcid.org/oauth/token', requestOptions);
+       /*   const response = await fetch('https://sandbox.orcid.org/oauth/token', requestOptions);
            const data = await response.json(); 
-           this.setState({ postId: data.id }); 
+           this.setState({ postId: data.id });  */
     } else {
         console.log("User denied authorization or authorization has failed. Attempting to get permission again")
         window.location.href='https://localhost:3000/denied'
-    } */
+    } 
 // 
     //sessionStorage.setItem("access_token_parsed", parseJwt(values.access_token))
 
@@ -122,7 +160,20 @@ class Access extends Component {
 	  //  sessionStorage.setItem("token", queryParams.token)
 	  //  console.log("queryParams =",queryParams);
     }
-  }
+
+ //   setData() {
+
+      /*
+      // https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=
+        .post("https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid", body)
+        .then(function(response) {
+          console.log(response.data);
+        })
+        .catch(function(error) {
+          console.log(error);
+      });  */
+  //  } 
+
   render() {
     return (
         <h1>Access</h1>
