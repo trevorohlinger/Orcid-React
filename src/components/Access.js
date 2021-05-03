@@ -87,6 +87,10 @@ class Access extends Component {
      axios({
       method: 'post',
       url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
+    //  headers: {
+    //    'Authorization': `Basic ${values.access_token}`
+     //     'Authorization': `Bearer ${sessionStorage.access_token}`
+   //   },
       data: {
         code          :  values.code,
         redirect_uri  : 'https://localhost:3000/access',
