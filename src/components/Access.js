@@ -31,6 +31,7 @@ class Access extends Component {
     {
 
       sessionStorage.setItem("access_token", values.access_token)
+      let unparsedToken = values.access_token
       let parsedToken = this.parseJwt(values.access_token)
       // employeeID is here
       console.log(parsedToken["urn:oid:1.2.840.113556.1.2.610"])
@@ -87,10 +88,10 @@ class Access extends Component {
      axios({
       method: 'post',
       url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
-    //  headers: {
-    //    'Authorization': `Basic ${values.access_token}`
-     //     'Authorization': `Bearer ${sessionStorage.access_token}`
-   //   },
+      headers: {
+        'Authorization': `Basic ${values.access_token}`
+    //      'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
+      }, 
       data: {
         code          :  values.code,
         redirect_uri  : 'https://localhost:3000/access',
