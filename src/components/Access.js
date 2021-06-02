@@ -6,8 +6,6 @@ import { isCompositeComponent } from 'react-dom/test-utils';
 
 const values = queryString.parse(window.location.search)
 
-const { REACT_APP_API_URL } = process.env;
-
 class Access extends Component {
   constructor(props) {
   
@@ -26,6 +24,8 @@ class Access extends Component {
   }
 
     componentDidMount() {
+      const API_URL = process.env.REACT_APP_API_URL;
+
       //values = queryString.parse(window.location.search)
       console.log(JSON.stringify(this.values))
 
@@ -48,56 +48,26 @@ class Access extends Component {
           --table Orcid-Data-Boise-State-University \
           --item parsedToken["urn:oid:1.2.840.113556.1.2.610"] \
           --condition-expression "attribute_not_exists(Id)" */
-
-    //  window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
-    window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${window.process.env.REACT_APP_API_URL}/access`
       
+     // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
+     window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}/access`
+    
+
       /* const orcidCode = queryString.parse(window.location.search)
          sessionStorage.setItem("orcidCode", orcidCode)  */
 
     } else if (values.code)
-    {
- // Need to import ajax and send this post to AWS Lambda using ajax 
-  /*    $.ajax({
+      {
+      axios({
+        method: 'post',
         url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
-        type: 'POST',
-        crossDomain: true,
-        contentType: 'application/json',
-        data: JSON.stringify(data),
-        dataType: 'json',
-        success: function(data) {
-            //success stuff. data here is the response, not your original data
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            //error handling stuff
-        }
-    }); */
-
-        // POST request using axios with set headers
-      /*  const article = { title: 'React POST Code to AWS Lambda' };
-        const headers = { 
-          'Accept': 'application/json',
-          'Content-Type': 'application/x-www-form-urlencoded', 
-          'Access-Control-Allow-Headers' : 'Content-Type',
-          'Access-Control-Allow-Methods' : 'OPTIONS,POST,GET', 
-        };
-        axios.post('https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid', article, { headers })
-            .then(response => this.setState({ articleId: response.data.id }));
-
-      console.log("code=",values.code)  */
-
-      // send a POST request
-   //  this.setData();
-     axios({
-      method: 'post',
-      url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
-      headers: {
-        'Authorization': `Basic ${values.access_token}`
-    //      'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
+        headers: {
+          'Authorization': `Basic ${values.access_token}`
+      //      'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
       }, 
       data: {
         code          :  values.code,
-        redirect_uri  : `${window.process.env.API_URL}/access`,
+        redirect_uri  : `${API_URL}/access`,
       }
     })
     .then (res => console.log("result returned ",res))
@@ -153,7 +123,7 @@ class Access extends Component {
            this.setState({ postId: data.id });  */
     } else {
         console.log("User denied authorization or authorization has failed. Attempting to get permission again")
-        window.location.href='https://localhost:3000/denied'
+        window.location.href=`${API_URL}/denied`
     } 
 // 
     //sessionStorage.setItem("access_token_parsed", parseJwt(values.access_token))

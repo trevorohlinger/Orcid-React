@@ -38,7 +38,7 @@ class Login extends Component {
 	// }
 
   componentDidMount() {
-
+	console.log("window = ", window)  
 	// It seems this code is not being reached after redirect and callback from AWS ***********************************************************
 	  sessionStorage.setItem('test', 'abcd');
 	 // let location = useLocation();
@@ -46,45 +46,6 @@ class Login extends Component {
 	  // then save query param to local storage
 	  sessionStorage.setItem("token", queryParams.token)
 	  console.log("queryParams =",queryParams);
-	// It seems this code is not being reached after redirect and callback from AWS ***********************************************************
-
-	// Code for saving access token information. WIP **********************************************************
-	/*  const fetches = {
-		  loginFetch: (username, password) => {
-			  return fetch('s://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/callback',{
-			method: 'POST',
-			headers: {
-				'Content-Type' : 'application/json',
-				'Accepts' : 'application/json',
-				token : localStorage.getItem('token')
-			},
-			body: JSON.stringify({
-				username: username,
-				password: password
-			})
-				}).then(res => res.json())
-		  }
-		}
-
-		export const loginUser = (username, password) => {
-			return function(dispatch){
-				fetches.loginFetch(username, password)
-				.then(json => {
-					if(json.token){
-						localStorage.setItem('token', json.token)
-						dispatch({
-							type: "SET_USER",
-							payload: json
-						})
-					} else {
-						console.log(json.error)
-					}
-				})
-			}
-		} */
-	// Code for saving access token information. WIP **********************************************************
-
-
 	}
 
 
