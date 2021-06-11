@@ -37,6 +37,7 @@ class Access extends Component {
       let parsedToken = this.parseJwt(values.access_token)
       // employeeID is here
       console.log(parsedToken["urn:oid:1.2.840.113556.1.2.610"])
+      sessionStorage.setItem("parsed_token", parsedToken["urn:oid:1.2.840.113556.1.2.610"])
       //console.log(this.parseJwt(values.access_token))
         /*1. Extract employeeNumber from access token. --Complete
           2. Check DynamoDb using a query for employeeNumber. If it already exists skip we are done.
@@ -58,16 +59,18 @@ class Access extends Component {
 
     } else if (values.code)
       {
+      console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
       axios({
         method: 'post',
         url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
         headers: {
           'Authorization': `Basic ${values.access_token}`
       //      'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
-      }, 
+      },
       data: {
         code          :  values.code,
         redirect_uri  : `${API_URL}/access`,
+        employeeID   : sessionStorage.getItem("parsed_token"),
       }
     })
     .then (res => console.log("result returned ",res))
