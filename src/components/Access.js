@@ -64,7 +64,7 @@ class Access extends Component {
         method: 'post',
         url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
         headers: {
-          'Authorization': `Basic ${values.access_token}`
+      //    'Authorization': `Basic ${values.access_token}`
       //      'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
       },
       data: {
