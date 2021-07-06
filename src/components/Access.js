@@ -50,8 +50,8 @@ class Access extends Component {
           --item parsedToken["urn:oid:1.2.840.113556.1.2.610"] \
           --condition-expression "attribute_not_exists(Id)" */
       
-     // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
-     window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}/access`
+  // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
+     window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
     
 
       /* const orcidCode = queryString.parse(window.location.search)
@@ -69,7 +69,7 @@ class Access extends Component {
       },
       data: {
         code          :  values.code,
-        redirect_uri  : `${API_URL}/access`,
+        redirect_uri  : `${API_URL}access`,
         employeeID   : sessionStorage.getItem("parsed_token"),
       }
     })
