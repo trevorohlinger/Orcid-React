@@ -126,7 +126,7 @@ class Access extends Component {
            this.setState({ postId: data.id });  */
     } else {
         console.log("User denied authorization or authorization has failed. Attempting to get permission again")
-        window.location.href=`${API_URL}/denied`
+        window.location.href=`${API_URL}denied`
     } 
 // 
     //sessionStorage.setItem("access_token_parsed", parseJwt(values.access_token))
