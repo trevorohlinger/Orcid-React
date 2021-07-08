@@ -49,25 +49,26 @@ class Access extends Component {
           --table Orcid-Data-Boise-State-University \
           --item parsedToken["urn:oid:1.2.840.113556.1.2.610"] \
           --condition-expression "attribute_not_exists(Id)" */
+          console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
+          axios({
+            method: 'post',
+            url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
+            headers: {
+          //    'Authorization': `Basic ${values.access_token}`
+          //      'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
+          },
+          data: {
+            code          :  values.code,
+            redirect_uri  : `${API_URL}access`,
+            employeeID   : sessionStorage.getItem("parsed_token"),
+          }
+        })
+        .then (res => console.log("result returned ",res))
       
   // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
      window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
     
-     console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
-     axios({
-       method: 'post',
-       url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
-       headers: {
-     //    'Authorization': `Basic ${values.access_token}`
-     //      'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
-     },
-     data: {
-       code          :  values.code,
-       redirect_uri  : `${API_URL}access`,
-       employeeID   : sessionStorage.getItem("parsed_token"),
-     }
-   })
-   .then (res => console.log("result returned ",res))
+
       /* const orcidCode = queryString.parse(window.location.search)
          sessionStorage.setItem("orcidCode", orcidCode)  */
 
