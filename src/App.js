@@ -50,7 +50,10 @@ export default function App() {
             <Access /> 
           </Route>
           <Route path="/denied">
-            <Denied /> 
+            <Denied />
+          </Route> 
+          <Route path="/success">
+            <Success /> 
           </Route>
         </Switch>
       </div>

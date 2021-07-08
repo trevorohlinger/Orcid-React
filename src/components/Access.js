@@ -57,7 +57,7 @@ class Access extends Component {
       /* const orcidCode = queryString.parse(window.location.search)
          sessionStorage.setItem("orcidCode", orcidCode)  */
 
-    } if (values.code)
+    } else if (values.code)
       {
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
       axios({
@@ -69,7 +69,7 @@ class Access extends Component {
       },
       data: {
         code          :  values.code,
-        redirect_uri  : `${API_URL}access`,
+        redirect_uri  : `${API_URL}success`,
         employeeID   : sessionStorage.getItem("parsed_token"),
       }
     })
