@@ -4,6 +4,8 @@ import React from "react";
 import Login from './components/Login';
 import Access from './components/Access';
 import Denied from './components/Denied';
+import Success from './components/Success';
+
 import {
   BrowserRouter as Router,
   Switch,
