@@ -69,7 +69,7 @@ class Access extends Component {
       },
       data: {
         code          :  values.code,
-        redirect_uri  : `${API_URL}access`,
+        redirect_uri  : `${API_URL}success`,
         employeeID   : sessionStorage.getItem("parsed_token"),
       }
     })
