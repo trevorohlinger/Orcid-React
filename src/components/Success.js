@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import queryString from 'query-string'
 
-class Denied extends Component {
+class Success extends Component {
   constructor(props) {
 	super(props);
 
@@ -22,4 +22,4 @@ class Denied extends Component {
   }
 }
 
-export default Denied;
+export default Success;
