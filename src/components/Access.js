@@ -55,7 +55,7 @@ class Access extends Component {
     
 
       /* const orcidCode = queryString.parse(window.location.search)
-         sessionStorage.setItem("orcidCode", orcidCode)  */
+         sessionStorage.setItem("orcidCode", orcidCode) !!! */
 
     } else if (values.code)
       {
