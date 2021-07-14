@@ -30,8 +30,6 @@ class Access extends Component {
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
-    if (values.access_token)
-    {
       console.log("We are inside of if (values.access_token)")
       sessionStorage.setItem("access_token", values.access_token)
       let unparsedToken = values.access_token
@@ -59,7 +57,7 @@ class Access extends Component {
   /* const orcidCode = queryString.parse(window.location.search)
          sessionStorage.setItem("orcidCode", orcidCode) !!! */
 
-    } else if (values.code)
+    if (values.code)
       {
       console.log("We are inside of else if (values.code)")
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
