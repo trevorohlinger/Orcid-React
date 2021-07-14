@@ -30,6 +30,8 @@ class Access extends Component {
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
+    if (values.access_token)
+    {
       console.log("We are inside of if (values.access_token)")
       sessionStorage.setItem("access_token", values.access_token)
       let unparsedToken = values.access_token
@@ -37,7 +39,7 @@ class Access extends Component {
       // employeeID is here
       console.log(parsedToken["urn:oid:1.2.840.113556.1.2.610"])
       sessionStorage.setItem("parsed_token", parsedToken["urn:oid:1.2.840.113556.1.2.610"])
-      console.log("We are inside of if (values.access_token) #2")
+      console.log("We are inside of if (values.access_token)")
       //console.log(this.parseJwt(values.access_token))
         /*1. Extract employeeNumber from access token. --Complete
           2. Check DynamoDb using a query for employeeNumber. If it already exists skip we are done.
@@ -57,7 +59,7 @@ class Access extends Component {
   /* const orcidCode = queryString.parse(window.location.search)
          sessionStorage.setItem("orcidCode", orcidCode) !!! */
 
-    if (values.code)
+    } else if (values.code)
       {
       console.log("We are inside of else if (values.code)")
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
