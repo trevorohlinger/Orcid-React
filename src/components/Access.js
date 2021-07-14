@@ -27,11 +27,12 @@ class Access extends Component {
       const API_URL = process.env.REACT_APP_API_URL;
 
       //values = queryString.parse(window.location.search)
-      console.log(JSON.stringify(this.values))
+      console.log(JSON.stringify(values.access_token))
+      console.log(JSON.stringify(values.code))
 
     if (values.access_token)
     {
-
+      console.log("We are inside of if (values.access_token)")
       sessionStorage.setItem("access_token", values.access_token)
       let unparsedToken = values.access_token
       let parsedToken = this.parseJwt(values.access_token)
@@ -54,11 +55,12 @@ class Access extends Component {
      window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
     
 
-      /* const orcidCode = queryString.parse(window.location.search)
+  /* const orcidCode = queryString.parse(window.location.search)
          sessionStorage.setItem("orcidCode", orcidCode) !!! */
 
     } else if (values.code)
       {
+      console.log("We are inside of else if (values.access_token)")
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
       axios({
         method: 'post',
