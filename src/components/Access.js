@@ -78,7 +78,7 @@ class Access extends Component {
     })
     .then (res => console.log("result returned ",res))
     
-    window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon`
+    window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon`
 //    window.location.href=`${API_URL}success`
     //  window.location.href='https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=' + values.code
 
