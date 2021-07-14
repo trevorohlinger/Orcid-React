@@ -17,7 +17,7 @@ class Denied extends Component {
     }
   render() {
     return (
-        <h1>Please allow Boise State University access to your ORCID record. It allows us to keep your works cited up to date automatically. Please click logon and authorize access.</h1>
+        <h1>Please allow Boise State University access to your ORCID record. It allows us to keep your works cited up to date, which saves you valuable time. Please click logon and then authorize access.</h1>
     );
   }
 }

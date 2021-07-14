@@ -72,11 +72,12 @@ class Access extends Component {
       },
       data: {
         code          :  values.code,
-        redirect_uri  : `${API_URL}success`,
+        redirect_uri  : `${API_URL}access`,
         employeeID   : sessionStorage.getItem("parsed_token"),
       }
     })
     .then (res => console.log("result returned ",res))
+    window.location.href=`${API_URL}success`
     //  window.location.href='https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=' + values.code
 
  /*    const requestOptions = {
