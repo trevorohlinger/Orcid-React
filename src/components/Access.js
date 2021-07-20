@@ -83,8 +83,10 @@ class Access extends Component {
     })
     .then (res => console.log("result returned ",res))
     console.log("success = ", (sessionStorage.getItem("success")));
+    //This is not currently working properly. This is the last thing I worked on as of 7-14-2021
     if (sessionStorage.getItem("success")){
-      window.location.href=`${API_URL}success`
+    //  window.location.href=`${API_URL}success`
+    
     }
   //  window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid`
 //    window.location.href=`${API_URL}success`
