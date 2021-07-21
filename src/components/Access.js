@@ -25,6 +25,7 @@ class Access extends Component {
   }
 
     componentDidMount() {
+
       const API_URL = process.env.REACT_APP_API_URL;
 
       //values = queryString.parse(window.location.search)
@@ -64,7 +65,7 @@ class Access extends Component {
   /* const orcidCode = queryString.parse(window.location.search)
          sessionStorage.setItem("orcidCode", orcidCode) !!! */
 
-    } else if (values.code != NULL)
+    } else if (values.code)
       {
       console.log("We are inside of else if (values.code)")
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
@@ -80,13 +81,14 @@ class Access extends Component {
         redirect_uri  : `${API_URL}access`,
         employeeID   : sessionStorage.getItem("parsed_token"),
       }
-    })
-    .then (res => console.log("result returned ",res))
-    console.log("success = ", (sessionStorage.getItem("success")));
+      })
+      .then (res => console.log("result returned ",res))
+      console.log("success = ", (sessionStorage.getItem("success")));
     //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
     if (sessionStorage.getItem("success")){
     //  window.location.href=`${API_URL}success`
-    
+      window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
+      sessionStorage.setItem("success", false)
     }
 //    window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid`
 //    window.location.href=`${API_URL}success`
