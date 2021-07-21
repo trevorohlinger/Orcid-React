@@ -49,7 +49,7 @@ class Access extends Component {
           2. Check DynamoDb using a query for employeeNumber. If it already exists skip we are done.
           3. if not continue getting the Orcid access token.
         */  
-  /*  do this from lambda  
+      /*  do this from lambda  
       grant permissions inside aws to post to dynamodb
           aws dynamodb put-item \
           --table Orcid-Data-Boise-State-University \
@@ -64,7 +64,7 @@ class Access extends Component {
   /* const orcidCode = queryString.parse(window.location.search)
          sessionStorage.setItem("orcidCode", orcidCode) !!! */
 
-    } else if (values.code)
+    } else if (values.code != NULL)
       {
       console.log("We are inside of else if (values.code)")
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
@@ -83,12 +83,12 @@ class Access extends Component {
     })
     .then (res => console.log("result returned ",res))
     console.log("success = ", (sessionStorage.getItem("success")));
-    //This is not currently working properly. This is the last thing I worked on as of 7-14-2021
+    //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
     if (sessionStorage.getItem("success")){
     //  window.location.href=`${API_URL}success`
     
     }
-  //  window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid`
+//    window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid`
 //    window.location.href=`${API_URL}success`
     //  window.location.href='https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=' + values.code
 
