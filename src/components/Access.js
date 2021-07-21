@@ -45,6 +45,7 @@ class Access extends Component {
       console.log("We are inside of if (values.access_token)")
       this.state.success = true;
       sessionStorage.setItem("success", true)
+      sessionStorage.setItem("access_token_complete", true)
       //console.log(this.parseJwt(values.access_token))
         /*1. Extract employeeNumber from access token. --Complete
           2. Check DynamoDb using a query for employeeNumber. If it already exists skip we are done.
@@ -85,7 +86,7 @@ class Access extends Component {
       .then (res => console.log("result returned ",res))
       console.log("success = ", (sessionStorage.getItem("success")));
     //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
-    if (sessionStorage.getItem("success")){
+    if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
     //  window.location.href=`${API_URL}success`
       sessionStorage.setItem("success", false)
       window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access` 
