@@ -26,7 +26,7 @@ export default function App() {
             </li> 
             <li>
             {/* <Link to="/logon">logon</Link> */}
-            <a href="https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon">Link Accounts</a>
+            <a href="https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon">Click here to link your ORCID account.</a>
             </li>
           </ul>
         </nav>
