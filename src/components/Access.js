@@ -84,7 +84,7 @@ class Access extends Component {
    // if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
     //  window.location.href=`${API_URL}success`
   //    sessionStorage.setItem("success", false)
-      window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success` 
+  /* This is the extra redirect ---->    window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success` 
   //  }
 
     } else {
