@@ -86,6 +86,7 @@ class Access extends Component {
   //    sessionStorage.setItem("success", false)
   // This is the extra redirect ---->    window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success` 
   //  }
+      window.location.href=`${API_URL}success`
 
     } else {
         console.log("User denied authorization or authorization has failed. Attempting to get permission again")
