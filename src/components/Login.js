@@ -48,92 +48,17 @@ class Login extends Component {
 	  console.log("queryParams =",queryParams);
 	}
 
-
-	// Changing this value window.location.href= will change the redirect. The question is how do I change /dev/login to redirect to the proper URL and not google.com
-	// Solved by creating a new lambda function with a similar name and giving it a new API endpoint called /logon instead of /login.
-	// window.location.href= 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/login'
-
-	// send a cookie before returning
-/*	if (!this.props.match.params.code)
-	{
-	//	window.location.href= 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon'
-	//https://boisestateorcidauthentication.auth.us-west-2.amazoncognito.com/oauth2/authorize?response_type=code&client_id=7dtn7vm3gb4m0fl51hmbpihaa6&redirect_uri=https%3A//spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/callback%3Fstate%3Dstate=b660a377-04e2-4524-bee8-54b0b97df8a3
-		let url= encodeURI('https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon')
-		window.location.href= url;
-
-	} */
-
-		// var params = {
-		// 	client_id:     this.appId,
-		// 	client_secret: this.appClientSecret,
-		// 	//code:          openCode, // This is the code from the query string in URL
-		// 	// remove state for now. state:         newState,
-		// 	redirect_uri:  'http://localhost:3000',
-		// 	grant_type:    'authorization_code'
-		//   };
-
-		//   const axios = require('axios')
-
-		//   axios.post('https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/callback', {
-		// 		params
-		//   })
-		// 	.then(function (response) {
-		// 	  console.log(response);
-		// 	})
-
-/*			axios.post('https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon', {
-				Name: 'Fred',
-				Age: '23'
-			  })
-			  .then(function (response) {
-				console.log(response);
-			  }) */
-
-
-	/*	const search = window.location.search;
-		const params = new URLSearchParams(search);
-		const foo = params.get('code'); */
-
-	//const query = new URLSearchParams(this.props.location.search);
-	//const token = query.get('token')
-	//console.log(token)//123
-
-	//	console.log(this.props);
-	//qs.parse(this.props.location.search, { ignoreQueryPrefix: true }).__firebase_request_key
-	  //window.location.href = 'https://twitter.com/home'
-	/*if query paramater code = true then save code and send them to the login function with orcid
-	pass token to the callback function tell orcid to go exchange code and send it back.
-	explain when complete */
-
 	//checkLoginStatus()
 	// TODO: Backend Function for redirect login to Boise State -- Complete
-	// TODO: Backend Function for callback from Boise State
-	// TODO: Backend Function for callback from ORCID
+	// TODO: Backend Function for callback from Boise State		-- Complete
+	// TODO: Backend Function for callback from ORCID			-- Complete
 
-	// TODO: Check for access token (Session Storage)
+	// TODO: Check for access token (Session Storage)			-- Complete
 	// TODO: If no token, check to see if they are logged in
 	// TODO: If not logged in, redirect out to AWS Lambda to redirect to Boise State Login
 
 	// TODO: Redirect to AWS Lambda to redirect to ORCID token exchange
 	// TODO: Look for query parameter to know if ORCID code was successfull
-/*
-  render() {
-    return (
-      <div>
-	  { this.state.success ?
-	    <div>
-		  SUCCESS
-		</div>
-	    :
-		<div>ERROR</div>
-	  }
-      </div>
-    );
-  }
-}
-
-export default Login;
-*/
 
   render() {
 	const queryParams = qs.parse(this.props.location.search, {ignoreQueryPrefix: true}).access_token

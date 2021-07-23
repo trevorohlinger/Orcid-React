@@ -28,7 +28,6 @@ class Access extends Component {
 
       const API_URL = process.env.REACT_APP_API_URL;
 
-      //values = queryString.parse(window.location.search)
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
@@ -61,10 +60,6 @@ class Access extends Component {
   // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
      window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
   // window.location.href=`${API_URL}success`
-    
-
-  /* const orcidCode = queryString.parse(window.location.search)
-         sessionStorage.setItem("orcidCode", orcidCode) !!! */
 
     } else if (values.code)
       {
@@ -91,88 +86,13 @@ class Access extends Component {
   //    sessionStorage.setItem("success", false)
       window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success` 
   //  }
-//    window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid`
-//    window.location.href=`${API_URL}success`
-    //  window.location.href='https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=' + values.code
 
- /*    const requestOptions = {
-      method: 'POST', 
-     // headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded', 
-        'Access-Control-Allow-Headers' : 'Content-Type',
-        'Access-Control-Allow-Origin'  : 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=',
-        // https://gentle-inlet-06589.herokuapp.com/https://sandbox.orcid.org/oauth/token
-        'Access-Control-Allow-Methods' : 'OPTIONS,POST,GET', 
-     },
-      data: JSON.stringify({
-         client_id: 'APP-RASOJQY62Z86Q8CU',
-         client_secret : 'df79d593-8392-46ca-9f4a-2fb4cb109655',
-         grant_type : 'authorization_code',
-         code: values.code, 
-         redirect_uri  : 'https://localhost:3000'}) 
-    };  
-    fetch('https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=', requestOptions)
-        .then(response => {
-          console.log('response= ',response)
-        }) */
- // Local POST Request. Not the way we want this done in the future, but works to get the initial authorization code for testing.
-  /*      const requestOptions = {
-        method: 'POST', 
-       // headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/x-www-form-urlencoded', 
-          'Access-Control-Allow-Headers' : 'Content-Type',
-          'Access-Control-Allow-Origin'  : ' https://pub.sandbox.orcid.org/oauth/token',
-          // https://gentle-inlet-06589.herokuapp.com/https://sandbox.orcid.org/oauth/token
-          'Access-Control-Allow-Methods' : 'OPTIONS,POST,GET', 
-       },
-        data: JSON.stringify({
-           client_id: 'APP-RASOJQY62Z86Q8CU',
-           client_secret : 'df79d593-8392-46ca-9f4a-2fb4cb109655',
-           grant_type : 'authorization_code',
-           code: values.code, 
-           redirect_uri  : 'https://localhost:3000'}) 
-      };  
-      fetch('https://pub.sandbox.orcid.org/oauth/token', requestOptions)
-          .then(response => {
-            console.log('response= ',response)
-          }) */
-       /*   const response = await fetch('https://sandbox.orcid.org/oauth/token', requestOptions);
-           const data = await response.json(); 
-           this.setState({ postId: data.id });  */
     } else {
         console.log("User denied authorization or authorization has failed. Attempting to get permission again")
         window.location.href=`${API_URL}denied`
     } 
-// 
-    //sessionStorage.setItem("access_token_parsed", parseJwt(values.access_token))
+  }
 
-    // ------------------------------------------- important -------------------------------- sessionStorage.setItem("id_token", values.id_token) 
-      
-    //  sessionStorage.setItem("access_token", values.access_token.employeeNumber)
-    //  window.sessionStorage.getItem("access_token")
-    //  console.log("access_token =",data.access_token)
-
-	  // then save query param to local storage
-	  //  sessionStorage.setItem("token", queryParams.token)
-	  //  console.log("queryParams =",queryParams);
-    }
-
- //   setData() {
-
-      /*
-      // https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid?code=
-        .post("https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid", body)
-        .then(function(response) {
-          console.log(response.data);
-        })
-        .catch(function(error) {
-          console.log(error);
-      });  */
-  //  } 
 
   render() {
     return (
