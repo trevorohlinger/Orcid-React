@@ -17,6 +17,7 @@ import {
 
 export default function App() {
   return (
+
     <Router>
       <div>
         <nav>
@@ -26,7 +27,8 @@ export default function App() {
             </li> 
             <li>
             {/* <Link to="/logon">logon</Link> */}
-            <a href="https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon">Click here to link your ORCID account.</a>
+            <strong>
+            <u href="https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon">Click here to link your ORCID account.</u></strong>
             </li>
           </ul>
         </nav>
