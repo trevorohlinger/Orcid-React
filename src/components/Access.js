@@ -58,7 +58,7 @@ class Access extends Component {
           --condition-expression "attribute_not_exists(Id)" */
       
   // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
-     window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access2`
+     window.location.href=`${API_URL}access2`
   // window.location.href=`${API_URL}success`
 /*
     } else if (values.code)
