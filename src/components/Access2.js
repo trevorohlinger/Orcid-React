@@ -57,8 +57,11 @@ class Access2 extends Component {
             --item parsedToken["urn:oid:1.2.840.113556.1.2.610"] \
             --condition-expression "attribute_not_exists(Id)" */
         
-    // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
-       window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access2`
+    
+            // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
+    
+            //   window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access2`
+            window.location.href=`${API_URL}success` 
     // window.location.href=`${API_URL}success`
   /*
       } else if (values.code)
@@ -89,7 +92,7 @@ class Access2 extends Component {
     //    window.location.href=`${API_URL}success`
   */
       } else {
-          console.log("User denied authorization or authorization has failed. Attempting to get permission again")
+          console.log("User denied authorization or authorization has failed. Attempting to get permission again.")
           window.location.href=`${API_URL}denied`
       } 
     }
