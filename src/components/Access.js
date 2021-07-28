@@ -31,8 +31,8 @@ class Access extends Component {
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
-      if (values.code)
-      {
+ /*     if (values.code)
+      { */
       console.log("We are inside of else if (values.code)")
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
       axios({
@@ -58,10 +58,10 @@ class Access extends Component {
   //  }
   //    window.location.href=`${API_URL}success`
 
-    } else {
+ /*   } else {
         console.log("User denied authorization or authorization has failed. Attempting to get permission again")
         window.location.href=`${API_URL}denied`
-    } 
+    } */
   }
 
     
