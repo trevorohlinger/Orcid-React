@@ -3,6 +3,7 @@ import './App.css';
 import React from "react";
 import Login from './components/Login';
 import Access from './components/Access';
+import Access2 from './components/Access2';
 import Denied from './components/Denied';
 import Success from './components/Success';
 
@@ -44,6 +45,9 @@ export default function App() {
           />
           <Route path="/access">
             <Access /> 
+          </Route>
+          <Route path="/access2">
+            <Access2 /> 
           </Route>
           <Route path="/denied">
             <Denied />
