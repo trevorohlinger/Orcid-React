@@ -33,18 +33,14 @@ class Access extends Component {
 
       if (values.access_token)
       {
-        sessionStorage.setItem("success", false)
-        console.log("We are inside of if (values.access_token)")
         sessionStorage.setItem("access_token", values.access_token)
-        let unparsedToken = values.access_token
         let parsedToken = this.parseJwt(values.access_token)
         // employeeID is here
         console.log(parsedToken["urn:oid:1.2.840.113556.1.2.610"])
         sessionStorage.setItem("parsed_token", parsedToken["urn:oid:1.2.840.113556.1.2.610"])
-        console.log("We are inside of if (values.access_token)")
-        this.state.success = true;
-        sessionStorage.setItem("success", true)
-        sessionStorage.setItem("access_token_complete", true)
+
+        this.setState({success: true})
+
         //console.log(this.parseJwt(values.access_token))
           /*1. Extract employeeNumber from access token. --Complete
             2. Check DynamoDb using a query for employeeNumber. If it already exists skip we are done.
@@ -62,7 +58,7 @@ class Access extends Component {
     
             //   window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access2`
             
-            window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access2`
+    //      window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access2`
     // window.location.href=`${API_URL}success`
   /*
       } else if (values.code)

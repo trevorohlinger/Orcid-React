@@ -29,8 +29,7 @@ export default function App() {
             <li>
             {/* <Link to="/logon">logon</Link> */}
             <strong><u>
-            {/* <a href="https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon">Click here to create or connect your ORCID iD</a></u></strong> */}
-            <a href="https://weblogin.boisestate.edu/adfs/oauth2/authorize?client_id=700cb295-52f1-4ea6-8d5f-a48166209ed6&response_type=code&redirect_uri=https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/callback&scope=openid">Click here to create or connect your ORCID iD</a></u></strong>
+            <a href="https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon">Click here to create or connect your ORCID iD</a></u></strong>
             </li>
           </ul>
         </nav>
