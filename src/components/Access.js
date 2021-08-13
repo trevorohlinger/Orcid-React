@@ -53,7 +53,7 @@ class Access extends Component {
         data: {
           code          :  values.code,
           redirect_uri  : `${API_URL}access`,
-          employeeID   : this.parseJwt(sessionStorage.getItem("access_token"))
+          employeeID   : this.parseJwt(sessionStorage.getItem("access_token")["urn:oid:1.2.840.113556.1.2.610"])
         }
         })
         .then (res => {
