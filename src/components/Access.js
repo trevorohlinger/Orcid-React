@@ -42,7 +42,7 @@ class Access extends Component {
       } else if (values.code)
         {
         console.log("We are inside of else if (values.code)")
-        console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
+        //console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
         axios({
           method: 'post',
           url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
@@ -53,10 +53,12 @@ class Access extends Component {
         data: {
           code          :  values.code,
           redirect_uri  : `${API_URL}access`,
-          employeeID   : sessionStorage.getItem("parsed_token"),
+          employeeID   : this.parseJwt(sessionStorage.getItem("access_token"))
         }
         })
-        .then (res => console.log("result returned ",res))
+        .then (res => {
+          console.log("result returned ",res)
+        })
       //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
      // if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
       //  window.location.href=`${API_URL}success`
