@@ -58,6 +58,7 @@ class Access extends Component {
         })
         .then (res => {
           console.log("result returned ",res)
+          window.location.href=`${API_URL}success`
         })
       //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
      // if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
