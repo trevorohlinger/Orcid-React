@@ -59,6 +59,7 @@ class Access extends Component {
         .then (res => {
           console.log("result returned ",res)
           //window.location.href=`${API_URL}success`
+          window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}updateDB`
         })
       //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
      // if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
@@ -68,6 +69,7 @@ class Access extends Component {
     //    window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success` 
     //  }
     //    window.location.href=`${API_URL}success`
+      
       } else {
           console.log("User denied authorization or authorization has failed. Attempting to get permission again.")
           window.location.href=`${API_URL}denied`
