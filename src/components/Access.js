@@ -47,9 +47,6 @@ class Access extends Component {
           method: 'post',
           url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
           headers: {
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
         //    'Authorization': `Basic ${values.access_token}`
         //    'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
         },
@@ -62,13 +59,13 @@ class Access extends Component {
         .then (res => {
           console.log("result returned ",res)
           //window.location.href=`${API_URL}success`
-          window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
-          // Changing something just to see if it shows up in git.
+          // window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
         })
-      //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
-     // if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
-      //  window.location.href=`${API_URL}success`  
-    //    sessionStorage.setItem("success", false)
+
+    //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
+    //  if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
+    //  window.location.href=`${API_URL}success`  
+    //  sessionStorage.setItem("success", false)
     
     //    window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success` 
     //  }
