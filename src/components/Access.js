@@ -29,7 +29,7 @@ class Access extends Component {
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
-      if (values.access_token && !success)
+      if (values.access_token /* && !success */)
       {
         sessionStorage.setItem("access_token", values.access_token)
         //let parsedToken = this.parseJwt(values.access_token)
