@@ -29,7 +29,7 @@ class Access extends Component {
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
-      if (values.access_token)
+      if (values.access_token && !success)
       {
         sessionStorage.setItem("access_token", values.access_token)
         //let parsedToken = this.parseJwt(values.access_token)
@@ -37,7 +37,7 @@ class Access extends Component {
         //console.log(parsedToken["urn:oid:1.2.840.113556.1.2.610"])
         //sessionStorage.setItem("parsed_token", parsedToken["urn:oid:1.2.840.113556.1.2.610"])
         this.setState({success: true})      
-        window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
+        window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
 
       } else if (values.code)
         {
@@ -58,8 +58,8 @@ class Access extends Component {
         })
         .then (res => {
           console.log("result returned ",res)
-          //window.location.href=`${API_URL}success`
-          // window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
+          window.location.href=`${API_URL}updateDB`
+          //window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
         })
 
     //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
@@ -81,7 +81,6 @@ class Access extends Component {
   render() {
     return (
         <h1>Access</h1>
-
     );
   }
 }
