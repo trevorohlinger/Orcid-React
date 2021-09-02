@@ -29,7 +29,7 @@ class Access extends Component {
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
-   if (values.code)
+   if (/*values.code*/ this.state.success == true)
         {
           console.log("We are inside of else if (values.code)")
           //console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
@@ -61,7 +61,7 @@ class Access extends Component {
     //  }
     //    window.location.href=`${API_URL}success`
       
-      } else if (values.access_token && this.state.success == false )
+      } else if (values.access_token && this.state.success == false)
         {
           sessionStorage.setItem("access_token", values.access_token)
           //let parsedToken = this.parseJwt(values.access_token)
