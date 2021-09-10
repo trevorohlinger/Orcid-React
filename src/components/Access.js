@@ -24,6 +24,9 @@ class Access extends Component {
 
     componentDidMount() {
 
+      //testing using updateDB !!!!! DELETE BEFORE PRODUCTION
+      window.location.href=`${API_URL}updateDB`
+
       const API_URL = process.env.REACT_APP_API_URL;
 
       console.log(JSON.stringify(values.access_token))

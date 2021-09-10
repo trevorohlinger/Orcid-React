@@ -1,0 +1,78 @@
+[33md00746c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33mc7fa92c[m HEAD@{1}: reset: moving to HEAD~1
+[33m258ca4c[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{2}: pull: Fast-forward
+[33mc7fa92c[m HEAD@{3}: reset: moving to HEAD~1
+[33m258ca4c[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{4}: commit: testing redirect to success page
+[33mc7fa92c[m HEAD@{5}: commit: Reverted back to redirecting to /access for now
+[33md00746c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m HEAD@{6}: commit: Updated redirect URI to the right aws endpoint
+[33m70baf12[m HEAD@{7}: commit: Updated access to redirect to DynamoDB lambda
+[33m742c0b4[m HEAD@{8}: commit: Removed redirect to success so lambda can do it.
+[33m5004bdb[m HEAD@{9}: commit: Updated to redirect to success page when finished
+[33m009203b[m HEAD@{10}: commit: fixed syntax for parseJwt
+[33madc0fea[m HEAD@{11}: commit: Fixing JwT parsing for employeeID
+[33mcb46110[m HEAD@{12}: commit: attempting to fix employeeID pass
+[33m2fa44fa[m HEAD@{13}: commit: Removed success redirect and log printouts
+[33m29c9f00[m HEAD@{14}: commit: moved query string to line 7
+[33mdae023c[m HEAD@{15}: commit: cleaned shit up
+[33m9dd4959[m HEAD@{16}: commit: Use this.setState properly and cleaned up dev stuff
+[33m089ae21[m HEAD@{17}: commit: Bypassed redirect lambda for BSU.
+[33m368d390[m HEAD@{18}: commit: Added if and else back in so user can deny authorization.
+[33m8ea1f4a[m HEAD@{19}: commit: Swapped code between access.js and access2.js again.
+[33m3b9d31f[m HEAD@{20}: commit: Removed comma and values.code from the end of the redirect.
+[33m2385d8f[m HEAD@{21}: commit: Added , between redirect and values.code
+[33m55ed44c[m HEAD@{22}: commit: Added code to end of redirect url in access.js
+[33maaa2c7c[m HEAD@{23}: commit: Updated access.js to ask for permission in redirect then go to access2.js
+[33mba6d45f[m HEAD@{24}: commit: Removed if and else to force code to run.
+[33m0efa26b[m HEAD@{25}: commit: Swapped code between access and access2.
+[33m561c346[m HEAD@{26}: commit: Removed redirect to authorization page from access.js
+[33m1f7a6bd[m HEAD@{27}: commit: Removed redirect from going to authorization page twice.
+[33ma1fdac9[m HEAD@{28}: commit: Updated redirect to go to access2 instead of just access.
+[33m508485b[m HEAD@{29}: commit: Commented out some code in access.js that relates to access2.js
+[33m49cfcd4[m HEAD@{30}: commit: Created access2.js to handle some of access.js workload and separate them so they aren't looping over one another.
+[33m32edf2a[m HEAD@{31}: commit: Added back in <a> to make it a link.
+[33m95555dc[m HEAD@{32}: commit: Made main link bold and underlined.
+[33mc2b50c7[m HEAD@{33}: commit: Added success redirect back in so it looks nicer.
+[33ma38079e[m HEAD@{34}: commit: Added success redirect to the end of access.js
+[33med0a37a[m HEAD@{35}: commit: Fixed syntax error for redirect.
+[33m9eb0311[m HEAD@{36}: commit: Removed extra redirect from access.js for now.
+[33m09691bd[m HEAD@{37}: commit: Removed unnecessary links and code comments.
+[33m07f517e[m HEAD@{38}: commit: Added success redirect.
+[33m41f8fd1[m HEAD@{39}: commit: Fixed small syntax error.
+[33m99b118b[m HEAD@{40}: commit: Removed booleans, testing one extra redirect
+[33mabe3981[m HEAD@{41}: commit: Added second flag to check to prevent looping repeatedly to access.js
+[33m35a86a0[m HEAD@{42}: commit: Changed boolean to false before redirect now :)
+[33m7f21cb9[m HEAD@{43}: commit: Added success boolean and redirect to go back into Access after completing operation
+[33m4ffa082[m HEAD@{44}: commit: Added check != NULL with values.code
+[33mfa3567c[m HEAD@{45}: commit: Removed success page reroute.
+[33m3490ce0[m HEAD@{46}: commit: Using session storage for success boolean.
+[33m4000ba6[m HEAD@{47}: commit: Updated boolean success trigger location.
+[33m0267a10[m HEAD@{48}: commit: attempting fix at success boolean with state
+[33m0692df8[m HEAD@{49}: commit: Added check for success and a redirect to success page when successful.
+[33m59931aa[m HEAD@{50}: commit: Removed success redirect
+[33m4bd6df8[m HEAD@{51}: commit: Added success redirect beneath main redirect in access.js
+[33mc08aa8f[m HEAD@{52}: commit: Restored redirect within if(values.access_token)
+[33m0f07c54[m HEAD@{53}: commit: Changed access.js back to the way it was. Further testing needed.
+[33m7b23984[m HEAD@{54}: commit: Changed redirect to orcid for testing
+[33m6dca5fa[m HEAD@{55}: commit: Changed redirect to callback for testing
+[33m130798b[m HEAD@{56}: commit: Changed redirect to just /logon
+[33m0b06fe8[m HEAD@{57}: commit: Changed redirect to /logon
+[33mf1cefd0[m HEAD@{58}: commit: Changed redirect URL for window.location.href
+[33m7f78313[m HEAD@{59}: commit: Added redirect to access.js after posting code to OrcidRedirectLambda
+[33md657615[m HEAD@{60}: commit: Updated Access.js to redirect to Success.js and updated denied.js message
+[33me9b355e[m HEAD@{61}: commit: manually reverting back.
+[33m0feab4c[m HEAD@{62}: commit: Removed the if (values.access_code) from access.js
+[33m642f2c8[m HEAD@{63}: commit: Fixed console.log inside access.js
+[33ma356df4[m HEAD@{64}: commit: Updated logs for access.js to tell where we are getting to.
+[33mef7c19c[m HEAD@{65}: commit: Attempting to redirect to success page again.
+[33m60b8a7a[m HEAD@{66}: commit: Created an import for the success page.
+[33mf606be7[m HEAD@{67}: commit: Updated success with proper class name and export.
+[33m78b98b3[m HEAD@{68}: commit: Added success.js redirect.
+[33mbf36683[m HEAD@{69}: checkout: moving from master to master
+[33mbf36683[m HEAD@{70}: commit: Changed redirect back to access over success.
+[33md3ad277[m HEAD@{71}: commit: Created Success.js page and updated redirect URL after posting token to OrcidRedirectLambda.
+[33mcd7b8d3[m HEAD@{72}: commit: Fixed the url link to the denied page
+[33m00a95ea[m HEAD@{73}: commit: Changed to an if rather than else if for values.code.
+[33m5af7cfc[m HEAD@{74}: commit: Moved values.code to run before redirect.
+[33mdb2b2bd[m HEAD@{75}: commit: Trying to use values.code after redirect within the same if statement.
+[33m8909c25[m HEAD@{76}: commit: Changed redirect URL to have one less /
+[33m7aaabcc[m HEAD@{77}: commit: Removed authorization header from Post request in Access.js
