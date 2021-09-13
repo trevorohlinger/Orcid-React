@@ -27,7 +27,7 @@ class Access extends Component {
       const API_URL = process.env.REACT_APP_API_URL;
 
       //testing using updateDB !!!!! DELETE BEFORE PRODUCTION
-      window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}updateDB`
+      window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/updateDB`
       //window.location.href=`${API_URL}updateDB`
 
       console.log(JSON.stringify(values.access_token))
