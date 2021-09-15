@@ -58,6 +58,15 @@ class Access extends Component {
           .then (res => {
             console.log("result returned ",res)
             //window.location.href=`${API_URL}updateDB`
+            const response = {
+              statusCode: 200,
+              headers: {
+                  "Access-Control-Allow-Headers" : "Content-Type",
+                  "Access-Control-Allow-Origin": "*",
+                  "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+              },
+              body: JSON.stringify('Hello from Lambda!')
+            }
             window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/updateDB`            
           })
 
