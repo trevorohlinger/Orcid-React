@@ -43,7 +43,7 @@ class Access extends Component {
             headers: {
               'Access-Control-Allow-Origin': '*',
           //    'Access-Control-Allow-Headers': 'Content-Type',
-              "Access-Control-Allow-Headers": "Content-Type, Accept",
+              "Access-Control-Allow-Headers": "Content-Type, Accept, access-control-allow-methods",
               'Access-Control-Allow-Methods': 'OPTIONS,POST,GET', 
               "Access-Control-Allow-Credentials" : true,             
           //    'Authorization': `Basic ${values.access_token}`
@@ -61,7 +61,7 @@ class Access extends Component {
             const response = {
               statusCode: 200,
               headers: {
-                  "Access-Control-Allow-Headers": "Content-Type, Accept",
+                  "Access-Control-Allow-Headers": "Content-Type, Accept, access-control-allow-methods",
                   "Access-Control-Allow-Origin": "*",
                   "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
               },
