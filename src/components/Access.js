@@ -41,11 +41,11 @@ class Access extends Component {
             method: 'post',
             url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
             headers: {
+			        'Content-Type'   : 'application/x-www-form-urlencoded',
               'Access-Control-Allow-Origin': '*',
           //    'Access-Control-Allow-Headers': 'Content-Type',
-              "Access-Control-Allow-Headers": "Content-Type, Accept, access-control-allow-methods",
-              'Access-Control-Allow-Methods': 'OPTIONS,POST,GET', 
-              "Access-Control-Allow-Credentials" : true,             
+              "Access-Control-Allow-Headers": "Content-Type, access-control-allow-methods",
+              'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',         
           //    'Authorization': `Basic ${values.access_token}`
           //    'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
           },
