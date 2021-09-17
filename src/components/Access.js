@@ -33,7 +33,7 @@ class Access extends Component {
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
-   if (values.code /* this.state.success == true*/)
+   if (values.code)
         {
           console.log("We are inside of else if (values.code)")
           //console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
@@ -45,7 +45,7 @@ class Access extends Component {
 			        'Content-Type': 'application/x-www-form-urlencoded, application/json',
               "Access-Control-Allow-Origin": "*",
           //    'Access-Control-Allow-Headers': 'Content-Type',
-              "Access-Control-Allow-Headers": "Content-Type, Accept, Access-Control-Allow-Methods",
+              "Access-Control-Allow-Headers": "Content-Type, Accept",
               'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',         
           //    'Authorization': `Basic ${values.access_token}`
           //    'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
@@ -62,7 +62,7 @@ class Access extends Component {
             const response = {
               statusCode: 200,
               headers: {
-                  "Access-Control-Allow-Headers": "Content-Type, Accept, Access-Control-Allow-Methods",
+                  "Access-Control-Allow-Headers": "Content-Type, Accept",
                   "Access-Control-Allow-Origin": "*",
                   "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
               },
