@@ -42,6 +42,7 @@ class Access extends Component {
             url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
             headers: {
               //"Access-Control-Allow-Headers": "Content-Type, Accept",
+              "Access-Control-Allow-Headers": "Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers",
     //!!  "Access-Control-Request-Headers": "Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers",
 			        "Content-Type": "application/x-www-form-urlencoded, application/json",
             //  "Access-Control-Allow-Origin": "*",
