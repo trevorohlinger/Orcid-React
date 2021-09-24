@@ -42,12 +42,12 @@ class Access extends Component {
             url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
             headers: {
               //"Access-Control-Allow-Headers": "Content-Type, Accept",
-              "Accept": "application/json",
+              "Access-Control-Request-Headers": "Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers",
 			        "Content-Type": "application/x-www-form-urlencoded, application/json",
               "Access-Control-Allow-Origin": "*",
           //    'Access-Control-Allow-Headers': 'Content-Type',
               
-              'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',         
+              'Access-Control-Request-Methods': 'OPTIONS,POST,GET',         
           //    'Authorization': `Basic ${values.access_token}`
           //    'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
           },
@@ -65,7 +65,8 @@ class Access extends Component {
               headers: {
                //   "Access-Control-Allow-Headers": "Content-Type, Accept",
                   "Access-Control-Allow-Origin": "*",
-                  "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+                  "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+                  "Access-Control-Allow-Headers": "Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers"
               },
               body: JSON.stringify('Hello from Lambda!') 
             }
