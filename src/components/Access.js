@@ -33,7 +33,7 @@ class Access extends Component {
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
-   if (values.code)
+ /*  if (values.code)
         {
           console.log("We are inside of else if (values.code)")
           //console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
@@ -43,7 +43,7 @@ class Access extends Component {
             headers: {
               //"Access-Control-Allow-Headers": "Content-Type, Accept",
               "Access-Control-Allow-Headers": "Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers",
-    //!!  "Access-Control-Request-Headers": "Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers",
+    //!!      "Access-Control-Request-Headers": "Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers",
 			        "Content-Type": "application/x-www-form-urlencoded, application/json",
             //  "Access-Control-Allow-Origin": "*",
           //    'Access-Control-Allow-Headers': 'Content-Type',
@@ -72,7 +72,7 @@ class Access extends Component {
               body: JSON.stringify('Hello from Lambda!') 
             }
             window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/updateDB`            
-          })
+          }) 
 
     //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
     //  if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
@@ -83,7 +83,7 @@ class Access extends Component {
     //  }
     //    window.location.href=`${API_URL}success`
       
-      } else if (values.access_token && this.state.success == false)
+      } else */ if (values.access_token && this.state.success == false)
         {
           sessionStorage.setItem("access_token", values.access_token)
           //let parsedToken = this.parseJwt(values.access_token)
