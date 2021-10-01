@@ -54,7 +54,7 @@ class Access extends Component {
       {
       console.log("We are inside of else if (values.code)")
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
-      axios({
+   /*   axios({
         method: 'post',
         url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
         headers: {
@@ -69,9 +69,9 @@ class Access extends Component {
         //employeeID   : this.parseJwt(values.access_token)["urn:oid:1.2.840.113556.1.2.610"]
         
       }
-    })
+    }) 
     .then (res => console.log("result returned ",res))
-    console.log("success = ", (sessionStorage.getItem("success")));
+    console.log("success = ", (sessionStorage.getItem("success"))); */
     //This is not currently working properly. This is the last thing I worked on as of 7-14-2021
    // window.location.href=`${API_URL}success`
   } else if (values.access_token && this.state.success == false)
@@ -82,11 +82,11 @@ class Access extends Component {
           //console.log(parsedToken["urn:oid:1.2.840.113556.1.2.610"])
           //sessionStorage.setItem("parsed_token", parsedToken["urn:oid:1.2.840.113556.1.2.610"])
           this.setState({success: true})      
-        //  window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
-        window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
+          window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
+        //window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
   } else {
-    console.log("User denied authorization or authorization has failed. Attempting to get permission again")
-    window.location.href=`${API_URL}denied`
+      console.log("User denied authorization or authorization has failed. Attempting to get permission again")
+      window.location.href=`${API_URL}denied`
   } 
 }
 
