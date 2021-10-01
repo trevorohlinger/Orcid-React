@@ -54,7 +54,7 @@ class Access extends Component {
       {
       console.log("We are inside of else if (values.code)")
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
-   /*   axios({
+      axios({
         method: 'post',
         url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
         headers: {
@@ -71,7 +71,7 @@ class Access extends Component {
       }
     }) 
     .then (res => console.log("result returned ",res))
-    console.log("success = ", (sessionStorage.getItem("success"))); */
+    console.log("success = ", (sessionStorage.getItem("success"))); 
     //This is not currently working properly. This is the last thing I worked on as of 7-14-2021
    // window.location.href=`${API_URL}success`
   } else if (values.access_token && this.state.success == false)
