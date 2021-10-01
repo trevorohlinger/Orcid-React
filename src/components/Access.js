@@ -26,7 +26,7 @@ class Access extends Component {
 
     componentDidMount() {
       const API_URL = process.env.REACT_APP_API_URL;
-      const CLIENT_ID = process.env.ENV_CLIENT_ID;
+      const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
       //values = queryString.parse(window.location.search)
       console.log(JSON.stringify(values.access_token))
