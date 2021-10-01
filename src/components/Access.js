@@ -92,7 +92,7 @@ class Access extends Component {
 
   render() {
     return (
-        <h1>Access</h1>
+        <h1>Thank you for authorizing Boise State University to make changes to your account. We will update your ORCID profile with your works cited as needed. You may close this window.</h1>
 
     );
   }
