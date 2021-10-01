@@ -66,7 +66,7 @@ class Login extends Component {
 	sessionStorage.setItem("token", queryParams.token)
 	console.log("queryParams =",queryParams);
     return (
-      <div>Medium Tutorial: {this.props.match.params.code}</div>
+      <div>Login {this.props.match.params.code}</div>
 //	  <div>Saving Access Token :  {this.props.match.params.code}</div>
 	  
     );
