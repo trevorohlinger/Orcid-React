@@ -54,7 +54,7 @@ class Access extends Component {
 
     //window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
   // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
-     window.location.href=`${ORCID_URL}client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
+      window.location.href=`${ORCID_URL}client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
   //window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/updateDB`
 
     } else if (values.code)
@@ -78,7 +78,7 @@ class Access extends Component {
       }
     }) 
     .then (res => console.log("result returned ",res))
-    console.log("success = ", (sessionStorage.getItem("success"))); 
+      console.log("success = ", (sessionStorage.getItem("success"))); 
     //This is not currently working properly. This is the last thing I worked on as of 7-14-2021
    // window.location.href=`${API_URL}success`
   } else if (values.access_token && this.state.success == false)

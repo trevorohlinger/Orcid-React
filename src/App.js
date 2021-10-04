@@ -14,6 +14,8 @@ import {
   Link,
 }  from "react-router-dom";
 
+const ORCID_ENDPOINT = process.env.REACT_APP_ORCID_ENDPOINT;
+
 //create router here instead of going straight to login.
 
 export default function App() {
@@ -29,7 +31,7 @@ export default function App() {
             <li>
             {/* <Link to="/logon">logon</Link> */}
             <strong><u>
-            <a href="https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/logon">Click here to create or connect your ORCID iD</a></u></strong>
+            <a href="&#96${ORCID_ENDPOINT}logon">Click here to create or connect your ORCID iD</a></u></strong>
             </li>
           </ul>
         </nav>
