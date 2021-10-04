@@ -31,7 +31,7 @@ export default function App() {
             <li>
             {/* <Link to="/logon">logon</Link> */}
             <strong><u>
-            <a href={'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/' + ENV_FLAG + '/login'}>
+            <a href={`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/${ENV_FLAG}/logon`}>
               Click here to create or connect your ORCID iD </a></u></strong>
             </li>
           </ul>
