@@ -31,7 +31,7 @@ export default function App() {
             <li>
             {/* <Link to="/logon">logon</Link> */}
             <strong><u>
-            <a v-bind:href="ENV_FLAG + '/logon'">
+            <a v-bind:href="ENV_FLAG">
               Click here to create or connect your ORCID iD </a></u></strong>
             </li>
           </ul>
