@@ -5,7 +5,7 @@ import axios from 'axios';
 import { isCompositeComponent } from 'react-dom/test-utils';
 
 const values = queryString.parse(window.location.search)
-
+require('dotenv').config()
 
 class Access extends Component {
   constructor(props) {
