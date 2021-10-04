@@ -15,7 +15,6 @@ import {
 }  from "react-router-dom";
 
 const ENV_FLAG = process.env.REACT_APP_ENV_FLAG;
-url = ENV_FLAG;
 
 //create router here instead of going straight to login.
 
@@ -32,7 +31,7 @@ export default function App() {
             <li>
             {/* <Link to="/logon">logon</Link> */}
             <strong><u>
-            <a v-bind:href="url">
+            <a href={'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/' + ENV_FLAG + '/login'}>
               Click here to create or connect your ORCID iD </a></u></strong>
             </li>
           </ul>
