@@ -11,11 +11,11 @@ window['process'] = {
       // ------------------------------------------------------------------------
       // SERVER 
       // ------------------------------------------------------------------------
-       REACT_APP_API_URL: 'https://master.d1mm5pvnsxz7da.amplifyapp.com/',
+      // REACT_APP_API_URL: 'https://master.d1mm5pvnsxz7da.amplifyapp.com/',
 
-       REACT_APP_CLIENT_ID: 'APP-RASOJQY62Z86Q8CU',
+      // REACT_APP_CLIENT_ID: 'APP-RASOJQY62Z86Q8CU',
 
-       REACT_APP_CLIENT_SECRET: 'df79d593-8392-46ca-9f4a-2fb4cb109655',
+      // REACT_APP_CLIENT_SECRET: 'df79d593-8392-46ca-9f4a-2fb4cb109655',
     },
   }
   
