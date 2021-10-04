@@ -61,6 +61,7 @@ class Login extends Component {
 	// TODO: Look for query parameter to know if ORCID code was successfull
 
   render() {
+	require('dotenv').config()
 	const queryParams = qs.parse(this.props.location.search, {ignoreQueryPrefix: true}).access_token
 	// then save query param to local storage
 	sessionStorage.setItem("token", queryParams.token)
