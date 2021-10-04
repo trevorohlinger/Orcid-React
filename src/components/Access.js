@@ -27,6 +27,7 @@ class Access extends Component {
     componentDidMount() {
       const API_URL = process.env.REACT_APP_API_URL;
       const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+      const ORCID_URL = process.env.REACT_APP_ORCID_URL;
 
       //values = queryString.parse(window.location.search)
       console.log(JSON.stringify(values.access_token))
@@ -48,7 +49,7 @@ class Access extends Component {
 
     //window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
   // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
-     window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
+     window.location.href=`${ORCID_URL}client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
   //window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/updateDB`
 
     } else if (values.code)
@@ -83,7 +84,7 @@ class Access extends Component {
           //console.log(parsedToken["urn:oid:1.2.840.113556.1.2.610"])
           //sessionStorage.setItem("parsed_token", parsedToken["urn:oid:1.2.840.113556.1.2.610"])
           this.setState({success: true})      
-          window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
+          window.location.href=`${ORCID_URL}client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
         //window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
   } else {
       console.log("User denied authorization or authorization has failed. Attempting to get permission again")
