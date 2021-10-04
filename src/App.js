@@ -20,7 +20,7 @@ const ENV_FLAG = process.env.REACT_APP_ENV_FLAG;
 
 export default function App() {
   return (
-    
+
     <Router>
       <div>
         <nav>
@@ -32,7 +32,7 @@ export default function App() {
             {/* <Link to="/logon">logon</Link> */}
             <strong><u>
             <a href="https://spm35eaceb.execute-api.us-west-2.amazonaws.com"
-              onclick="location.href=this.href+'/'+ENV_FLAG+'/logon'; return false;">
+              onclick="location.href=this.href+'/'+ENV_FLAG+'/logon'">
               Click here to create or connect your ORCID iD</a></u></strong>
             </li>
           </ul>
