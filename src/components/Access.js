@@ -6,6 +6,7 @@ import { isCompositeComponent } from 'react-dom/test-utils';
 
 const values = queryString.parse(window.location.search)
 require('dotenv').config()
+const ENV_LINK = process.env.REACT_APP_ENV_LINK;
 
 class Access extends Component {
   constructor(props) {
@@ -58,7 +59,7 @@ class Access extends Component {
       console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
       axios({
         method: 'post',
-        url: 'https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/orcid',
+        url: `${ENV_LINK}/orcid`,
         headers: {
       //    'Authorization': `Basic ${values.access_token}`
       //    'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
