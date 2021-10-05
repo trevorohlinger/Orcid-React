@@ -6,7 +6,7 @@ import { isCompositeComponent } from 'react-dom/test-utils';
 
 const values = queryString.parse(window.location.search)
 require('dotenv').config()
-const ENV_LINK = process.env.REACT_APP_ENV_LINK;
+
 
 class Access extends Component {
   constructor(props) {
@@ -29,6 +29,7 @@ class Access extends Component {
       const API_URL = process.env.REACT_APP_API_URL;
       const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
       const ORCID_URL = process.env.REACT_APP_ORCID_URL;
+      const ENV_LINK = process.env.REACT_APP_ENV_LINK;
 
       //values = queryString.parse(window.location.search)
       console.log(JSON.stringify(values.access_token))
@@ -51,7 +52,6 @@ class Access extends Component {
     //window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
   // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
       window.location.href=`${ORCID_URL}client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
-  //window.location.href=`https://spm35eaceb.execute-api.us-west-2.amazonaws.com/dev/updateDB`
 
     } else if (values.code)
       {
