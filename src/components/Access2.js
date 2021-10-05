@@ -1,3 +1,5 @@
+/* This is a deprecated file. It's no longer being used by the project. */
+
 import React, { Component } from 'react';
 import queryString from 'query-string'
 
