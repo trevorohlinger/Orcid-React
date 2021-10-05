@@ -29,11 +29,6 @@ class Access extends Component {
       const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
       const ORCID_URL = process.env.REACT_APP_ORCID_URL;
 
-
- /*   const API_URL = REACT_APP_API_URL;
-      const CLIENT_ID = REACT_APP_CLIENT_ID;
-      const ORCID_URL = REACT_APP_ORCID_URL; */
-
       //values = queryString.parse(window.location.search)
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
