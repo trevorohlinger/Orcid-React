@@ -31,7 +31,6 @@ class Access extends Component {
       const ORCID_URL = process.env.REACT_APP_ORCID_URL;
       const ENV_LINK = process.env.REACT_APP_ENV_LINK;
 
-      //values = queryString.parse(window.location.search)
       console.log(JSON.stringify(values.access_token))
       console.log(JSON.stringify(values.code))
 
@@ -49,8 +48,7 @@ class Access extends Component {
       this.state.success = true;
       sessionStorage.setItem("success", true) 
 
-    //window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
-  // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
+      // window.location.href='https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=https://localhost:3000/access'
       window.location.href=`${ORCID_URL}client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
 
     } else if (values.code)
@@ -61,32 +59,20 @@ class Access extends Component {
         method: 'post',
         url: `${ENV_LINK}/orcid`,
         headers: {
-      //    'Authorization': `Basic ${values.access_token}`
-      //    'Authorization': `Bearer ${sessionStorage.getItem("access_token")}`
       },
       data: {
         code          :  values.code,
         redirect_uri  : `${API_URL}access`,
-        employeeID   : sessionStorage.getItem("parsed_token"),
-        //employeeID   : this.parseJwt(sessionStorage.getItem("access_token"))["urn:oid:1.2.840.113556.1.2.610"]
-        //employeeID   : this.parseJwt(values.access_token)["urn:oid:1.2.840.113556.1.2.610"]
-        
+        employeeID   : sessionStorage.getItem("parsed_token"),      
       }
     }) 
     .then (res => console.log("result returned ",res))
       console.log("success = ", (sessionStorage.getItem("success"))); 
-    //This is not currently working properly. This is the last thing I worked on as of 7-14-2021
-   // window.location.href=`${API_URL}success`
   } else if (values.access_token && this.state.success == false)
         {
           sessionStorage.setItem("access_token", values.access_token)
-          //let parsedToken = this.parseJwt(values.access_token)
-          //employeeID is here
-          //console.log(parsedToken["urn:oid:1.2.840.113556.1.2.610"])
-          //sessionStorage.setItem("parsed_token", parsedToken["urn:oid:1.2.840.113556.1.2.610"])
           this.setState({success: true})      
           window.location.href=`${ORCID_URL}client_id=${CLIENT_ID}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}access`
-        //window.location.href=`https://sandbox.orcid.org/oauth/authorize?client_id=APP-RASOJQY62Z86Q8CU&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=${API_URL}success`
   } else {
       console.log("User denied authorization or authorization has failed. Attempting to get permission again")
       window.location.href=`${API_URL}denied`
