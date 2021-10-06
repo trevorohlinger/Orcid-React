@@ -12,6 +12,10 @@
 /build
 
 # misc
+key.pem
+keytmp.pem
+.eslintcache
+bfg.jar
 .DS_Store
 .env
 .env.local

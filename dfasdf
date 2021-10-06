@@ -1,0 +1,485 @@
+[33mcommit 9601c2a598f3c736721d8875b63a0eb2a6c1a8a5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Sep 10 16:12:11 2021 -0600
+
+    Removing private keys...
+
+[33mcommit 32f5ea3ea5fb2e87e990a6673b1f5613dec6aafc[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Sep 10 16:05:31 2021 -0600
+
+    Updated access.js to call updateDB
+
+[33mcommit d03fcfad808f6d1a34700ada8ce4bc515cd23a17[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Sep 10 15:57:07 2021 -0600
+
+    Testing calling updateDB as soon as Access.js is run
+
+[33mcommit e651e91c2c9c6d51622cda06d0b3eb6a3ef50cc8[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Sep 7 16:42:33 2021 -0600
+
+    if (values.code) changed TESTING
+
+[33mcommit 1dc918b28c5ccbcc0e5d7131b60df1d5b11fca39[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Sep 7 16:37:56 2021 -0600
+
+    else if (this.state.success == true) updated
+
+[33mcommit bfed3a75fb52f2df726b84d5d237ee52de85788e[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Thu Sep 2 15:08:23 2021 -0600
+
+    Updated if (this.state.success == true) line 32
+
+[33mcommit b4aedf6681543db6ea14bd52c52164e72a4c3460[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Thu Sep 2 15:03:35 2021 -0600
+
+    Updated else if to check value of state.success
+
+[33mcommit 641a55b9b465550f6c63ca7dfa16b7c35812694b[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Aug 31 12:21:02 2021 -0600
+
+    Changed the order of if (values.code) & else if
+
+[33mcommit fcaa5c6e42fe43c9a46d777139933cf6551cc8ae[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Aug 31 12:06:50 2021 -0600
+
+    Commented out success check in if statement.
+
+[33mcommit 7d8d4f822dd33e73464903b2bf88cbb0188532a2[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Aug 31 10:42:29 2021 -0600
+
+    Updated redirect to access then updateDB 2nd time.
+
+[33mcommit 50d62c0764708ce82f1b4c9b3c621f26af4649ff[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Mon Aug 30 13:22:40 2021 -0600
+
+    Added in early success redirect for testing.
+
+[33mcommit 786063483d142f3b7f3927e6c6c0f28603a787b0[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Mon Aug 30 12:27:52 2021 -0600
+
+    Removed redirect to success from access.js
+
+[33mcommit be85825bb56c9866b0c68bd06c79313571e263a6[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 16:24:23 2021 -0600
+
+    Removed .eslintcache from git
+
+[33mcommit fb8ce336e1c4611a93a9538982f3e9eb0e319454[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 16:14:22 2021 -0600
+
+    Added new header to allow CORS
+
+[33mcommit be06b6f2b5b60eb41c2736ea7ae3187a483e92cb[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 15:45:49 2021 -0600
+
+    Slightly edited access.js to see if git is working properly
+
+[33mcommit 48d27e2bca753593038a5abbe99ad10c93fff987[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 13:56:01 2021 -0600
+
+    Added private keys to git ignore file
+
+[33mcommit b2d85c1427dee8f9085c52fcb07aaf46a89d7b87[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 13:48:55 2021 -0600
+
+    Removing private keys...
+
+[33mcommit f0a984bbdb8c84c32feb20f7d2e710d6bea59d6e[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 13:01:16 2021 -0600
+
+    testing redirect to success page
+
+[33mcommit c7fa92cedc49a0cb887251d84a79ee4757ce4002[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 11:58:16 2021 -0600
+
+    Reverted back to redirecting to /access for now
+
+[33mcommit d00746cf1c6ec4fb62589b8267f90cc7e615fc0b[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 11:50:10 2021 -0600
+
+    Updated redirect URI to the right aws endpoint
+
+[33mcommit 70baf12789371c19e9c27cc13d61d92cdfceb0bd[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Aug 25 11:37:09 2021 -0600
+
+    Updated access to redirect to DynamoDB lambda
+
+[33mcommit 742c0b40828da1c73653387b2d332ae0d10230fb[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Aug 17 12:28:48 2021 -0600
+
+    Removed redirect to success so lambda can do it.
+
+[33mcommit 5004bdbb768d814fdd7adf3b8554a76b1cb5f4c4[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 18:08:52 2021 -0600
+
+    Updated to redirect to success page when finished
+
+[33mcommit 009203b7262c73a309ea10272751da5b964b4d95[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 18:01:15 2021 -0600
+
+    fixed syntax for parseJwt
+
+[33mcommit adc0fea4de86e1850e3c4c03b4999ce8f14b0ec8[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 17:57:16 2021 -0600
+
+    Fixing JwT parsing for employeeID
+
+[33mcommit cb46110fb3f540d99309004a384401e37641b34c[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 17:52:09 2021 -0600
+
+    attempting to fix employeeID pass
+
+[33mcommit 2fa44fa60aa471887af6e3070b25d17990ecbaf2[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 17:33:06 2021 -0600
+
+    Removed success redirect and log printouts
+
+[33mcommit 29c9f0056bab78cce5da9b8e7d16ba3604485ee4[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 17:27:00 2021 -0600
+
+    moved query string to line 7
+
+[33mcommit dae023c0788eebc6c913e0e63824c9719388bf0a[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 16:52:28 2021 -0600
+
+    cleaned shit up
+
+[33mcommit 9dd4959d2b4a99918c3a982ce9557d1187bc2d3d[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 16:35:38 2021 -0600
+
+    Use this.setState properly and cleaned up dev stuff
+
+[33mcommit 089ae21148518623e3aba4009cda93071cb55c92[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Aug 13 16:17:59 2021 -0600
+
+    Bypassed redirect lambda for BSU.
+
+[33mcommit 368d39015dd4fa37c81bd6825d53eacdc6493653[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 17:39:49 2021 -0600
+
+    Added if and else back in so user can deny authorization.
+
+[33mcommit 8ea1f4a47ad45202e62e8a9e81147b7dc3cf6a72[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 17:15:15 2021 -0600
+
+    Swapped code between access.js and access2.js again.
+
+[33mcommit 3b9d31f6f9fdb434572776cd199dcad70d381d8d[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 17:06:35 2021 -0600
+
+    Removed comma and values.code from the end of the redirect.
+
+[33mcommit 2385d8f77e05dd2796293568c18b366a79af20f3[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 17:04:22 2021 -0600
+
+    Added , between redirect and values.code
+
+[33mcommit 55ed44c9d4127b8a81e17cecaca9cb264169830e[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:59:05 2021 -0600
+
+    Added code to end of redirect url in access.js
+
+[33mcommit aaa2c7ced94aa0671ae6665e2a76b4e9a000faee[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:49:51 2021 -0600
+
+    Updated access.js to ask for permission in redirect then go to access2.js
+
+[33mcommit ba6d45fbd4c60eea9f10488a281e580ba05649ac[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:41:17 2021 -0600
+
+    Removed if and else to force code to run.
+
+[33mcommit 0efa26bca4644a64292967a588b254b6b8ad09c8[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:35:05 2021 -0600
+
+    Swapped code between access and access2.
+
+[33mcommit 561c34649249c08d24838461cb6c3e1c3240575c[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:27:39 2021 -0600
+
+    Removed redirect to authorization page from access.js
+
+[33mcommit 1f7a6bd5814d1547fcec61fef19450021644452b[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:20:49 2021 -0600
+
+    Removed redirect from going to authorization page twice.
+
+[33mcommit a1fdac96ab98572a0b8baa640ff7b70b74dff873[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:14:46 2021 -0600
+
+    Updated redirect to go to access2 instead of just access.
+
+[33mcommit 508485b8fa85000059d0935cc034b9374543b27b[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:11:19 2021 -0600
+
+    Commented out some code in access.js that relates to access2.js
+
+[33mcommit 49cfcd46f95ee890f615e9d5e3edc17b59638649[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 28 16:06:43 2021 -0600
+
+    Created access2.js to handle some of access.js workload and separate them so they aren't looping over one another.
+
+[33mcommit 32edf2a0cb064fcd5ab0f745960a1490a084d5e1[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Jul 27 13:30:53 2021 -0600
+
+    Added back in <a> to make it a link.
+
+[33mcommit 95555dce9ad9a4bfb33ecb2a589b12985366d35c[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Jul 27 13:26:27 2021 -0600
+
+    Made main link bold and underlined.
+
+[33mcommit c2b50c7ccd325c62caa86811672aafa262c16758[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Jul 23 11:31:03 2021 -0600
+
+    Added success redirect back in so it looks nicer.
+
+[33mcommit a38079e6b1e3c410f18bcc8225ad0b8674842758[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Jul 23 11:24:03 2021 -0600
+
+    Added success redirect to the end of access.js
+
+[33mcommit ed0a37ae73a76e79df287e4ddd7705e2f07e3050[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Jul 23 11:13:15 2021 -0600
+
+    Fixed syntax error for redirect.
+
+[33mcommit 9eb0311c84d40b84da97b6a4211ed19834ea78bb[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Jul 23 11:10:58 2021 -0600
+
+    Removed extra redirect from access.js for now.
+
+[33mcommit 09691bd87375e22ae546688d8a2fdbd9565d84b0[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Jul 23 11:01:04 2021 -0600
+
+    Removed unnecessary links and code comments.
+
+[33mcommit 07f517e939bca5a967e75b44af25a005c46e3eec[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 21 17:31:18 2021 -0600
+
+    Added success redirect.
+
+[33mcommit 41f8fd1cca3881d99452562d6371dea73824549e[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 21 17:26:40 2021 -0600
+
+    Fixed small syntax error.
+
+[33mcommit 99b118b8bc7ed029ee0705211889fef1ca67580a[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 21 17:22:56 2021 -0600
+
+    Removed booleans, testing one extra redirect
+
+[33mcommit abe3981922101efa076fd3cbbec0d558c9053d33[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 21 17:15:31 2021 -0600
+
+    Added second flag to check to prevent looping repeatedly to access.js
+
+[33mcommit 35a86a0fa95bf6c1005368094f7fbf53843cdce2[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 21 17:03:18 2021 -0600
+
+    Changed boolean to false before redirect now :)
+
+[33mcommit 7f21cb90e99d991b0399b3cd2baaf196b862fa3a[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 21 16:55:40 2021 -0600
+
+    Added success boolean and redirect to go back into Access after completing operation
+
+[33mcommit 4ffa0825e490ad3778c314e489f574f67920c591[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 21 16:36:36 2021 -0600
+
+    Added check != NULL with values.code
+
+[33mcommit fa3567c573e1c874f3eeadad94752097e6107868[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Tue Jul 20 15:28:01 2021 -0600
+
+    Removed success page reroute.
+
+[33mcommit 3490ce0d5b14a4cd960325010d58840759c629f4[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 17:02:09 2021 -0600
+
+    Using session storage for success boolean.
+
+[33mcommit 4000ba625d022b8c2a62fc7efd820573576b1ae7[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 16:46:45 2021 -0600
+
+    Updated boolean success trigger location.
+
+[33mcommit 0267a100a5043cef41037b254adf8429a0e3b46b[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 16:37:07 2021 -0600
+
+    attempting fix at success boolean with state
+
+[33mcommit 0692df836d0b8bb51ed54c22d746395296e5061d[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 16:31:19 2021 -0600
+
+    Added check for success and a redirect to success page when successful.
+
+[33mcommit 59931aa683f99865a3c37462044875b820e6dc34[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 16:17:27 2021 -0600
+
+    Removed success redirect
+
+[33mcommit 4bd6df8f660d3b192b86c5089f90e0482e41a47c[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 16:07:51 2021 -0600
+
+    Added success redirect beneath main redirect in access.js
+
+[33mcommit c08aa8f7e8ff6f58fd87bc6194c8cd78712f8952[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 15:48:53 2021 -0600
+
+    Restored redirect within if(values.access_token)
+
+[33mcommit 0f07c54f008a39cfa093ee5454562e4292cbde03[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 15:38:36 2021 -0600
+
+    Changed access.js back to the way it was. Further testing needed.
+
+[33mcommit 7b23984cd91a5218cacdd765a64539cf0dc1ba3f[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 15:33:44 2021 -0600
+
+    Changed redirect to orcid for testing
+
+[33mcommit 6dca5fad32a631241f7c8f4c97954fbcbab11b2e[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 15:30:22 2021 -0600
+
+    Changed redirect to callback for testing
+
+[33mcommit 130798b302a0cbc0572dcdc20491f0670d0423e2[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 14:55:28 2021 -0600
+
+    Changed redirect to just /logon
+
+[33mcommit 0b06fe89faa7a7da581286a4a06f044acb44b88e[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 13:56:47 2021 -0600
+
+    Changed redirect to /logon
+
+[33mcommit f1cefd01a93fcc1c808c5543b2db7cc4c7ec0b29[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 13:49:17 2021 -0600
+
+    Changed redirect URL for window.location.href
+
+[33mcommit 7f78313ea61859129cc3aabe4f835e2ac04c0e8a[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 13:41:56 2021 -0600
+
+    Added redirect to access.js after posting code to OrcidRedirectLambda
+
+[33mcommit d65761563eab0c746aad9512e231dc9f1e34f7c1[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 13:36:18 2021 -0600
+
+    Updated Access.js to redirect to Success.js and updated denied.js message
+
+[33mcommit e9b355e3e8154ca00ae1bd66da897be1d37e7d77[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 13:15:33 2021 -0600
+
+    manually reverting back.
+
+[33mcommit 0feab4cbba4815c8d1e8191b984f8e506db1f300[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 12:55:12 2021 -0600
+
+    Removed the if (values.access_code) from access.js
+
+[33mcommit 642f2c8ad83927d2a3ba4568e4b1baa92cff3b37[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 12:45:36 2021 -0600
+
+    Fixed console.log inside access.js
+
+[33mcommit a356df4aaae7bf7e50f4ec3a7ae220aaaca6ac54[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Wed Jul 14 12:31:26 2021 -0600
+
+    Updated logs for access.js to tell where we are getting to.
+
+[33mcommit ef7c19c94b966c1864eace38e3b7b16ffcd34120[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Jul 9 16:32:24 2021 -0600
+
+    Attempting to redirect to success page again.
+
+[33mcommit 60b8a7a48a1bb88f48f80ca3d09b4ad9782d2f44[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Jul 9 12:40:00 2021 -0600
+
+    Created an import for the success page.
+
+[33mcommit f606be7df270ad5cb30014c33cece2d525d2580d[m
+Author: trevorohlinger <TrevorOhlinger@boisestate.edu>
+Date:   Fri Jul 9 12:30:27 2021 -0600
+
+    Updated success with proper class name and export.
