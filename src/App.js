@@ -26,6 +26,7 @@ export default function App() {
         <nav>
           <ul>
             <li>
+              {/* Linebreak for better spacing */}
               <Link to="/"><href><br/></href></Link>
             </li> 
             <li>
@@ -34,6 +35,8 @@ export default function App() {
             <a href={`${ENV_LINK}/logon`}>
               Click here to create or connect your ORCID iD </a></u></strong>
             </li>
+            {/* Linebreak for better spacing */}
+            <href><br/></href>
           </ul>
         </nav>
 
