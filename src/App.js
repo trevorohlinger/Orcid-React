@@ -26,7 +26,7 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">"\n"</Link>
+              <Link to="/"><href>""</href></Link>
             </li> 
             <li>
             {/* <Link to="/logon">logon</Link> */}
