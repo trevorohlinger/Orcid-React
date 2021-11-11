@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import {ReactComponent as Logo} from './logo.svg';
 import './App.css';
 import React from "react";
 import Login from './components/Login';
@@ -32,6 +32,7 @@ export default function App() {
             <li>
             {/* <Link to="/logon">logon</Link> */}
             <strong><u>
+            <Logo />
             <a href={`${ENV_LINK}/logon`}>
               Click here to create or connect your ORCID iD </a></u></strong>
             </li>
