@@ -1,4 +1,4 @@
-import {ReactComponent as Logo} from './logo.svg';
+import {ReactComponent as Logo} from './orcidLogo.svg';
 import './App.css';
 import React from "react";
 import Login from './components/Login';
