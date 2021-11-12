@@ -32,7 +32,6 @@ export default function App() {
             <li>
             {/* <Link to="/logon">logon</Link> */}
             <strong><u>
-            <img src={Logo} alt="orcidLogo.svg" />
             <a href={`${ENV_LINK}/logon`}>
               Click here to create or connect your ORCID iD </a></u></strong>
             </li>
