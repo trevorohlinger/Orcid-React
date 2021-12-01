@@ -26,16 +26,10 @@ class Login extends Component {
 
 	this.state = {
 	  success : false,
-//	  appId : '700cb295-52f1-4ea6-8d5f-a48166209ed6',
-//	  clientSecret : 'ocO9sMF7BWLhu_Z7x7nfUP9tsrsL5kL0o6Fm19qx',
 	};
 
 
   }
-
-	// getURL() {
-	// 	let location = useLocation();
-	// }
 
   componentDidMount() {
 	console.log("window = ", window)  
