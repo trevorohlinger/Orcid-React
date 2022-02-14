@@ -2,6 +2,193 @@
 <html lang="en">
   <head>
 
+   <!-- This is the header provided by Boise State University -->
+   <!--
+   <nav class="site-nav-primary" data-js="" aria-labelledby="site-header__primary-nav-label">
+
+      <h2 id="site-header__primary-nav-label" class="u-visual-hide">Boise Global Navigation</h2>
+
+      <ol class="site-nav-primary__list">
+          <li class="primary__list-item primary__list-item--depth-0"><a href="https://www.boisestate.edu/admissions/apply/" id="menu-item-1253" class="site-nav__action primary__action primary__action--depth-0">Apply</a></li>
+<li class="primary__list-item primary__list-item--depth-0"><a href="https://www.boisestate.edu/admissions/visit/" id="menu-item-1252" class="site-nav__action primary__action primary__action--depth-0">Visit</a></li>
+<li class="primary__list-item primary__list-item--depth-0"><a href="https://www.boisestate.edu/giving/" id="menu-item-1988" class="site-nav__action primary__action primary__action--depth-0">Give</a></li>
+
+
+          <li class="primary__list-item primary__list-item--desktop primary__list-item--depth-0">
+              <button
+                      id="site-nav-desktop-trigger"
+                      class="site-header-trigger site-header-trigger--menu site-header-trigger--menu-full"
+                      data-js="site-nav-menu-trigger"
+                      data-id="site-nav-desktop-off-canvas"
+                      aria-label="Desktop Menu Toggle"
+                      aria-expanded="false"
+              >
+          <span class="site-header-trigger__wrapper">
+                  <span class="site-header-trigger__label">Menu</span>
+             <i
+                          class="site-header-trigger__icon site-header-trigger__icon--menu icon icon-menu"
+                          aria-hidden="true"
+                          title="Open"
+                  ></i>
+             <i
+                          class="site-header-trigger__icon site-header-trigger__icon--menu-close icon icon-menu-close"
+                          aria-hidden="true"
+                          title="Close"
+                  ></i>
+          </span>
+              </button>
+              <nav
+                      id="site-nav-desktop-off-canvas-menu"
+                      class="site-nav__menu site-nav__menu--desktop-off-canvas"
+                      data-js="site-nav-menu"
+                      data-id="site-nav-desktop-off-canvas"
+                      aria-hidden="true"
+                      aria-label="Boise Main Menu"
+              >
+                  <div class="site-nav__menu-wrapper-outer">
+                      <div class="site-nav__menu-wrapper">
+                          <section class="site-nav__menu-child-wrapper" data-js="site-nav-desktop-off-canvas-menu-wrapper" aria-label="Site Navigation">
+                              <div class="site-nav__menu-cta">
+                                                                         <span> Ready to take the next step? <a href="https://www.boisestate.edu/admissions/virtual-visits/" class="site-nav-menu-tagline-action" data-js="site-nav-menu-action" rel="noopener">Plan your virtual visit. <i class="icon icon-long-arrow-right"></i></a></span>
+                                                                 </div>
+                          </section>
+                      </div>
+                  </div>
+              </nav>
+          </li>
+
+          <li class="primary__list-item primary__list-item--search primary__list-item--depth-0">
+              <button
+                      id="site-search-trigger-full"
+                      class="site-header-trigger site-header-trigger--search site-header-trigger--search-full site-nav-full__item site-nav-full__item--search"
+                      data-js="site-search-trigger-desktop"
+                      aria-label="Site Search Toggle"
+                      aria-expanded="false"
+              >
+                  <span class="site-header-trigger__label">Search</span>
+                  <i
+                          class="site-header-trigger__icon site-header-trigger__icon--search icon icon-search-thick"
+                          aria-hidden="true"
+                          title="Open"
+                  ></i>
+                  <i
+                          class="site-header-trigger__icon site-header-trigger__icon--search-close icon icon-menu-close"
+                          aria-hidden="true"
+                          title="Close"
+                  ></i>
+              </button>
+          </li>
+      </ol>
+
+  </nav>
+
+        <script>/* eslint-disable */
+var modernTribe = window.modernTribe || {};
+(function(mt) {
+ var header = mt.headerRender = mt.headerRender || {};
+ var forEach = Function.prototype.call.bind(Array.prototype.forEach);
+
+ header.util = {
+    debounce: function(func, wait, immediate) {
+       var timeout;
+       return function() {
+          var context = this, args = arguments;
+          var later = function() {
+             timeout = null;
+             if (!immediate) func.apply(context, args);
+          };
+          var callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+       };
+    },
+
+    trigger: function(el, eventName, data) {
+       var event;
+       try {
+          event = new CustomEvent(eventName, { detail: data });
+       } catch (e) {
+          event = document.createEvent('CustomEvent');
+          event.initCustomEvent(eventName, true, true, data);
+       }
+
+       el.dispatchEvent(event);
+    }
+ };
+
+ header.primary = {
+    mobileBreakpoint: 768,
+    el: document.getElementsByClassName('site-nav-primary')[0],
+    wrapper: document.getElementsByClassName('site-header')[0],
+    viewport: document.documentElement.clientWidth,
+
+    state: {
+       firstRun: true,
+       isDesktop: false,
+    },
+
+    isMobile: function() {
+       return document.documentElement.clientWidth < this.mobileBreakpoint;
+    },
+
+    bindEvents: function() {
+       window.addEventListener('resize', header.util.debounce(this.handleResize, 25));
+       document.addEventListener('modern_tribe/fonts_loaded', this.handleResize);
+    },
+
+    toggleBodyClass: function() {
+       var _this = this;
+       document.body.classList.remove('site-header--mobile-active');
+
+       if (!this.state.isDesktop) {
+          document.body.classList.remove('site-header--desktop-active');
+          forEach(this.el.querySelectorAll('.primary__list-item--dynamic'), function(node) {
+             _this.el.querySelector('.site-nav__list--primary').appendChild(node);
+          });
+       } else {
+          document.body.classList.add('site-header--desktop-active');
+          forEach(this.el.querySelector('.site-nav__list--primary').querySelectorAll('.primary__list-item--dynamic'), function(node) {
+             _this.el.querySelector('.site-nav-primary__list').insertBefore(node, _this.el.querySelector('.primary__list-item--guide'));
+          });
+       }
+    },
+
+    handleResize: function() {
+       if (document.documentElement.clientWidth >= header.primary.mobileBreakpoint) {
+          header.primary.toggleBodyClass();
+       } else {
+          header.primary.state.isDesktop = false;
+          document.body.classList.add('site-header--mobile-active');
+          document.body.classList.remove('site-header--desktop-active');
+       }
+
+       header.primary.viewport = document.documentElement.clientWidth;
+       header.util.trigger(document, 'modern_tribe/nav_resized');
+    },
+
+    init: function () {
+       if (!this.el) {
+          return;
+       }
+
+       if (this.isMobile()) {
+          document.body.classList.add('site-header--mobile-active');
+          document.body.classList.remove('site-header--desktop-active');
+       } else {
+          this.toggleBodyClass();
+       }
+
+       this.bindEvents();
+    }
+ };
+
+ header.primary.init();
+})(modernTribe);
+</script>
+<!-- This is the end of the header -->
+
+
    <style>
       h1 {text-align: center;
          vertical-align: middle;}
@@ -15,8 +202,9 @@
          vertical-align: middle;}
    </style>
 
+
     <meta charset="utf-8" />
-	<link rel="stylesheet" href="https://www.boisestate.edu/wp-content/themes/core/css/dist/master.min.css">
+	<link rel="stylesheet" href="https://www.boisestate.edu/wp-content/themes/core/css/dist/master.min.css"> 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -39,8 +227,9 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+ <title>React App</title>
   </head>
+  <!--
   <style>
    .center {
       position: absolute;
@@ -51,6 +240,8 @@
       }
    </style>
   <body>
+     -->
+     
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
          <header class="site-header site-header--minimal" data-js="site-header">
@@ -67,6 +258,8 @@
             </div>
          </header>
       </div>
+      
+      <!--
 	  <footer class="fixed-bottom site-footer site-footer--minimal">
          <div class="l-container l-container--inner">
             <div class="site-footer__under">
@@ -83,11 +276,94 @@
             </div>
          </div>
       </footer>
-	  
-	  <script>
-		window.API_URL = "\<\%= API_URL \%\>";
-	  </script>
-    <!--
+   -->
+
+      <!-- start of the footer -->
+
+      <footer class="site-footer">
+
+         <div class="l-container l-container--inner">
+      
+            
+         <nav class="site-footer__nav" aria-labelledby="site-footer__nav-label">
+      
+            <h2 id="site-footer__nav-label" class="u-visual-hide">Secondary Navigation</h2>
+      
+            <ul class="site-footer__nav-list">
+               <li class="secondary__list-item secondary__list-item--depth-0"><a href="https://my.boisestate.edu/" class="site-nav__action secondary__action secondary__action--depth-0">myBoiseState</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.boisestate.edu/safety/" class="site-nav__action secondary__action secondary__action--depth-0">Safety, Security and Support</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.boisestate.edu/jobs/" class="site-nav__action secondary__action secondary__action--depth-0">Career Opportunities</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.boisestatepublicradio.org/" class="site-nav__action secondary__action secondary__action--depth-0">Boise State Public Radio</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.boisestate.edu/library/" class="site-nav__action secondary__action secondary__action--depth-0">Albertsons Library</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.boisestate.edu/publicsafety-transportation/" class="site-nav__action secondary__action secondary__action--depth-0">Transportation and Parking</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.boisestate.edu/partnerships/" class="site-nav__action secondary__action secondary__action--depth-0">Partner with Us</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.morrisoncenter.com/" class="site-nav__action secondary__action secondary__action--depth-0">Morrison Center</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.boisestate.edu/alumni" class="site-nav__action secondary__action secondary__action--depth-0">Alumni</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.broncoshop.com/" class="site-nav__action secondary__action secondary__action--depth-0">Bronco Shop and Bookstore</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.boisestate.edu/president/about/university-leadership/" class="site-nav__action secondary__action secondary__action--depth-0">University Administration</a></li><li class="secondary__list-item secondary__list-item--depth-0"><a href="https://www.extramilearena.com/" class="site-nav__action secondary__action secondary__action--depth-0">ExtraMile Arena</a></li>
+            </ul>
+      
+            <a href="https://www.broncosports.com/" target="_blank" class="site-footer__nav-logo">
+               <span class="icon">
+                  <span class="u-visual-hide">Broncos Logo</span>
+               </span>
+               <span class="site-footer__nav-logo__heading">
+                  <span>Athletics<span>
+               </span>
+            </a>
+         </nav>
+      
+      
+      
+            <div class="site-footer__under">
+      
+               <div class="social-follow">
+      
+         <ul class="social-follow__list">
+      
+                  <li class="social-follow__item">
+               <a href="https://www.facebook.com/BoiseStateUniversity" class="social-follow__anchor" rel="me noopener" title="Follow us on Facebook" target="_blank">
+                  <i class="icon icon-facebook"></i>
+                  <span class="u-visual-hide">Follow us on Facebook</span>
+               </a>
+            </li>
+            
+                  <li class="social-follow__item">
+               <a href="https://www.instagram.com/boisestateuniversity/" class="social-follow__anchor" rel="me noopener" title="Follow us on Instagram" target="_blank">
+                  <i class="icon icon-instagram"></i>
+                  <span class="u-visual-hide">Follow us on Instagram</span>
+               </a>
+            </li>
+            
+                  <li class="social-follow__item">
+               <a href="https://twitter.com/BoiseState" class="social-follow__anchor" rel="me noopener" title="Follow us on Twitter" target="_blank">
+                  <i class="icon icon-twitter"></i>
+                  <span class="u-visual-hide">Follow us on Twitter</span>
+               </a>
+            </li>
+            
+                  <li class="social-follow__item">
+               <a href="https://www.youtube.com/user/BoiseStateUniversity" class="social-follow__anchor" rel="me noopener" title="Follow us on Youtube" target="_blank">
+                  <i class="icon icon-youtube"></i>
+                  <span class="u-visual-hide">Follow us on Youtube</span>
+               </a>
+            </li>
+               </ul>
+      
+      </div>
+      
+      
+               <div class="site-footer__utility">
+                  <ul class="site-footer__utility__nav">
+                     <li class="footer_util__list-item footer_util__list-item--depth-0"><a href="https://www.boisestate.edu/accessibility-landing/" class="site-nav__action footer_util__action footer_util__action--depth-0">Accessibility</a></li><li class="footer_util__list-item footer_util__list-item--depth-0"><a href="https://www.boisestate.edu/privacy" class="site-nav__action footer_util__action footer_util__action--depth-0">Privacy</a></li><li class="footer_util__list-item footer_util__list-item--depth-0"><a href="https://www.boisestate.edu/classroomconcerns/" class="site-nav__action footer_util__action footer_util__action--depth-0">Classroom Concerns</a></li><li class="footer_util__list-item footer_util__list-item--depth-0"><a href="https://www.boisestate.edu/policy/" class="site-nav__action footer_util__action footer_util__action--depth-0">Policies</a></li><li class="footer_util__list-item footer_util__list-item--depth-0"><a href="https://www.boisestate.edu/contact/" class="site-nav__action footer_util__action footer_util__action--depth-0">Contact Boise State</a></li>
+                  </ul>
+      
+                  <p class="site-footer__copyright">
+                     © 2022 All Rights Reserved.
+                     <a href="https://www.boisestate.edu/" rel="external">
+                        Boise State University
+                     </a>
+                  </p>
+               </div>
+            </div>
+      
+         </div>
+      
+      </footer>
+
+      <!-- End of the footer-->
+
+   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -98,4 +374,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+   window.API_URL = "\<\%= API_URL \%\>";
+  </script>
 </html>
