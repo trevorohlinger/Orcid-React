@@ -1,15 +1,31 @@
+
+
 <!DOCTYPE html>
+
+<script>
+import Login from './components/Login';
+
+import {
+   BrowserRouter as Router,
+   Switch,
+   Route,
+   Link,
+ }  from "react-router-dom";
+ 
+ const ENV_LINK = process.env.REACT_APP_ENV_LINK;
+</script>
+
 <html lang="en">
   <head>
 
    <!-- This is the header provided by Boise State University -->
-   <!--
+
    <nav class="site-nav-primary" data-js="" aria-labelledby="site-header__primary-nav-label">
 
       <h2 id="site-header__primary-nav-label" class="u-visual-hide">Boise Global Navigation</h2>
 
       <ol class="site-nav-primary__list">
-          <li class="primary__list-item primary__list-item--depth-0"><a href="https://www.boisestate.edu/admissions/apply/" id="menu-item-1253" class="site-nav__action primary__action primary__action--depth-0">Apply</a></li>
+<li class="primary__list-item primary__list-item--depth-0"><a href="https://www.boisestate.edu/admissions/apply/" id="menu-item-1253" class="site-nav__action primary__action primary__action--depth-0">Apply</a></li>
 <li class="primary__list-item primary__list-item--depth-0"><a href="https://www.boisestate.edu/admissions/visit/" id="menu-item-1252" class="site-nav__action primary__action primary__action--depth-0">Visit</a></li>
 <li class="primary__list-item primary__list-item--depth-0"><a href="https://www.boisestate.edu/giving/" id="menu-item-1988" class="site-nav__action primary__action primary__action--depth-0">Give</a></li>
 
@@ -188,6 +204,11 @@ var modernTribe = window.modernTribe || {};
 </script>
 <!-- This is the end of the header -->
 
+<a href={`${ENV_LINK}/logon`}>
+   Click here to create or connect your ORCID iD </a></u></strong>
+ </li>
+ {/* Linebreak for better spacing */}
+ <href><br/></href>
 
    <style>
       h1 {text-align: center;
@@ -204,7 +225,8 @@ var modernTribe = window.modernTribe || {};
 
 
     <meta charset="utf-8" />
-	<link rel="stylesheet" href="https://www.boisestate.edu/wp-content/themes/core/css/dist/master.min.css"> 
+	<link rel="stylesheet" href="https://www.boisestate.edu/theproject/wp-content/themes/core/css/master.css"> 
+   <!--https://www.boisestate.edu/wp-content/themes/core/css/dist/master.min.css-->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -245,12 +267,12 @@ var modernTribe = window.modernTribe || {};
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
          <header class="site-header site-header--minimal" data-js="site-header">
-            <div class="site-header__wrapper">
+            <!-- <div class="site-header__wrapper"> -->
                <div class="site-header__wrapper-inner">
-                  <div class="site-header__brand" data-js="site-header-brand">
+                  <!-- <div class="site-header__brand" data-js="site-header-brand">
                      <div class="logo" data-js="logo">
-                        <a href="https://www.boisestate.edu/" class="logo__wrap svgicon" rel="home">
-                        <span class="u-visual-hide">Boise State University Home</span>
+                       <a href="https://www.boisestate.edu/" class="logo__wrap svgicon" rel="home"> -->
+                        <!-- <span class="u-visual-hide">Boise State University Home</span> -->
                         </a>
                      </div>
                   </div>
@@ -259,6 +281,8 @@ var modernTribe = window.modernTribe || {};
          </header>
       </div>
       
+      <!-- this is where the Boise state logo code goes normally -->
+
       <!--
 	  <footer class="fixed-bottom site-footer site-footer--minimal">
          <div class="l-container l-container--inner">
@@ -276,7 +300,7 @@ var modernTribe = window.modernTribe || {};
             </div>
          </div>
       </footer>
-   -->
+      -->
 
       <!-- start of the footer -->
 

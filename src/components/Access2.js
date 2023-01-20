@@ -52,23 +52,14 @@ class Access2 extends Component {
         })
         .then (res => console.log("result returned ",res))
           console.log("success = ", (sessionStorage.getItem("success")));
-      //  This is not currently working properly. This is the last thing I worked on as of 7-14-2021
-     // if (sessionStorage.getItem("success") && sessionStorage.getItem("access_token_complete")){
-      //  window.location.href=`${API_URL}success`
-    //    sessionStorage.setItem("success", false)
           window.location.href=`${API_URL}success` 
-          
-    //  }
-    //    window.location.href=`${API_URL}success`
   
       } else {
           console.log("User denied authorization or authorization has failed. Attempting to get permission again")
           window.location.href=`${API_URL}denied`
       } 
 
-
     }
-
 
   render() {
     return (

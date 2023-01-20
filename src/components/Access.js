@@ -32,12 +32,12 @@ class Access extends Component {
       const ENV_LINK = process.env.REACT_APP_ENV_LINK;
 
       console.log(JSON.stringify(values.access_token))
-      console.log(JSON.stringify(values.code))
+      console.log(JSON.stringify(values.code)) 
 
     if (values.access_token)
     {
       sessionStorage.setItem("success", false)
-      console.log("We are inside of if (values.access_token)")
+      //console.log("We are inside of if (values.access_token)")
       sessionStorage.setItem("access_token", values.access_token)
       let unparsedToken = values.access_token
       let parsedToken = this.parseJwt(values.access_token)
@@ -53,8 +53,8 @@ class Access extends Component {
 
     } else if (values.code)
       {
-      console.log("We are inside of else if (values.code)")
-      console.log("parsed_token =", sessionStorage.getItem("parsed_token"))
+     // console.log("We are inside of else if (values.code)")
+      console.log("parsed_token =", sessionStorage.getItem("parsed_token")) 
       axios({
         method: 'post',
         url: `${ENV_LINK}/orcid`,
