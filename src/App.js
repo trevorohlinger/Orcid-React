@@ -27,9 +27,9 @@ const ENV_LINK = process.env.REACT_APP_ENV_LINK;
 
 //create your list of links using the router here.
 
+// Add in links to the other sections of the single-page web app here.
 export default function App() {
   return (
-// Add in links to the other sections of the single-page web app here.
     <Router>
       <div>
         <nav>
