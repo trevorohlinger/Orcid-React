@@ -38,12 +38,7 @@ export default function App() {
               {/* Linebreak for better spacing */}
               <Link to="/"><href><br/></href></Link>
             </li> 
-            <li>
-            {/* <Link to="/logon">logon</Link> */}
-            <strong><u>
-            <a href={`${ENV_LINK}/logon`}>
-              Click here to create or connect your ORCID iD </a></u></strong>
-            </li>
+            <h1>This page is currently down for maintenance. Please try linking accounts again at a later time.</h1>
             {/* Linebreak for better spacing */}
             <href><br/></href>
           </ul>
