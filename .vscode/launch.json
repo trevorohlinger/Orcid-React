@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "https://master.d1mm5pvnsxz7da.amplifyapp.com/",
+            "url": "https://localhost:3000/",
             "webRoot": "${workspaceFolder}"
         }
     ]
